@@ -1,0 +1,32 @@
+.r-board{width: 21%;float: left;height:100%;border-right: #cccccc 1px solid;box-sizing: border-box}
+.r-board button{display: block;width: 100%;height: 5rem;border: none}
+#apingpai{background: url(../../images/shops/icon_pingpai_normal.png) no-repeat center;background-size: 100% auto;}
+.container{overflow: hidden;box-sizing: border-box !important;padding-bottom: 60px;height: 100%}
+#ashiping{background: url(../../images/shops/icon_shiping_normal.png) no-repeat center;background-size: 100% auto;}
+#ashengxian{background: url(../../images/shops/icon_shengxian_normal.png) no-repeat center;background-size: 100% auto}
+#abaihuo{background: url(../../images/shops/icon_baihuo_normal.png) no-repeat center;background-size: 100% auto}
+#ashenghuo{background: url(../../images/shops/icon_shenghuo_normal.png) no-repeat center;background-size: 100% auto}
+.apingpai-pressed{background:url(../../images/shops/icon_pingpai_selected.png) no-repeat center !important;background-size: 100% auto}
+.ashiping-pressed{background:url(../../images/shops/icon_shiping_selected.png) no-repeat center !important;background-size: 100% auto}
+.ashengxian-pressed{background:url(../../images/shops/icon_shengxian_selected.png) no-repeat center !important;background-size: 100% auto}
+.abaihuo-pressed{background:url(../../images/shops/icon_baihuo_selected.png) no-repeat center !important;background-size: 100% auto}
+.ashenghuo-pressed{background:url(../../images/shops/icon_shenghuo_selected.png) no-repeat center !important;background-size: 100% auto}
+.l-board{width: 79%;float: right;height: 100%}
+
+.list{	height: 100%;  overflow: auto;box-sizing: border-box;display: none}
+.list dl{font-size: 1rem}
+.title{padding:0.6rem 6%;color:#666666;font-size: 1rem}
+.list dt{background:#eeeeee;padding:0.6rem 6%;color:#333333}
+.list dd{background: #ffffff;;padding:0.6rem 6%;color: #666666;word-break: break-all;padding-left: 0%}
+.dlabel{border: 1px #cccccc solid;padding:0.2rem 0;word-break: keep-all;text-overflow: ellipsis;overflow: hidden;margin-bottom:1rem;border-radius: 4px}
+.list a{display:inline-block;
+    width: 25%;
+    text-overflow: ellipsis;
+    margin-left: 6%;
+}
+.active{display: block}
+#pingpai
+.list{	height: 100%;  overflow: auto;box-sizing: border-box;display: none}
+#pingpai dl{font-size: 1rem}
+#pingpai dt{background:#eeeeee;padding:0.6rem 6%;color:#333333}
+#pingpai dd{background: #ffffff;;padding:0.6rem 6%;color: #666666;word-break: break-all}

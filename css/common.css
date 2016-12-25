@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+﻿﻿@charset "utf-8";
 /* CSS Document */
 *{ font-family:"微软雅黑";}
 body{width:100%;min-width:320px;color:#000;-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none;font-size: 14px; overflow-x:hidden;}
@@ -41,8 +41,15 @@ header{
     border-bottom: 1px solid rgb(221, 221, 221);
     text-align: center;
 }
+header .search{
+    height: 44px;
+    background: url('../images/shops/sous_04.png') no-repeat center;
+    background-size:70%;
+    border: none;
+    width: 44px;
+}
 header h1{
-	font-size: 1.2em;
+    font-size: 1.2em;
     display: block;
     color: #6e6e6e;
     line-height: 44px;
@@ -52,7 +59,7 @@ header h1{
     margin: 0;
 }
 .back{
-	background: url(../images/back_back.png) no-repeat;
+    background: url(../images/shops/back_back.png) no-repeat;
     background-size: 50%;
     background-position: 50%;
     position: absolute;
@@ -69,7 +76,7 @@ header{
     width: 100%;
     position:fixed;
     height: 44px;
-	line-height: 44px;
+    line-height: 44px;
     top:0;
 }
 ul{list-style: none}
@@ -149,7 +156,7 @@ a{text-decoration: none;text-align: center;color: inherit}
     color: #fb9228;
 }
 .center{
- text-align: center;
+    text-align: center;
 }
 .divCenter{
     margin: 0 auto;
@@ -174,7 +181,7 @@ input[type=radio] + label{
     border: 0px solid #b6b6b6;
     border-radius: .8rem;
     height: 1.45rem;
-    background: url(../images/want_br.png) no-repeat;
+    background: url(../images/shops/want_br.png) no-repeat;
     background-size: 100% 100%;
 }
 
@@ -224,7 +231,7 @@ input[type="checkbox"]:not(.toggle){
     -moz-appearance: none;
 }
 input[type='checkbox']:checked{
-    background: url(../images/want_br.png) no-repeat;
+    background: url(../images/shops/want_br.png) no-repeat;
     background-size: 100%;
     border-radius: 20px;
     border: 0;
@@ -234,7 +241,7 @@ input[type=radio]:checked + label:before{
     border: 0px solid #b6b6b6;
     border-radius: .8rem;
     height: 1.45rem;
-    background: url(../images/want_br.png) no-repeat;
+    background: url(../images/shops/want_br.png) no-repeat;
     background-size: 100% 100%;
 }
 .font-normal{
@@ -254,6 +261,18 @@ input[type=radio]:checked + label:before{
     font-size: .7rem;
     font-weight: normal;
 }
+.empty-board p{
+    font-size: 23px;
+    text-align: center;
+    color: #999999;
+}
+
+.empty{
+    background: url(../images/shops/searchfail.png) no-repeat center;
+    background-size: 51%;
+    width: 100%;
+    height: 14rem;
+}
 .font-smallest{font-size: .6rem;}
 
 .strong{font-weight: 600}
@@ -266,17 +285,17 @@ input[type=radio]:checked + label:before{
 
 }
 .font-weak{
-     color: #666;
+    color: #666;
 }
 .font-red{
     color:#e24a35;
 }
 .font-white{
     color: #ffffff;
-    
+
 }
 .font-green{
-	color:#8CC63F;
+    color:#8CC63F;
 }
 .right{float: right}
 
@@ -347,25 +366,25 @@ input[type=radio]:checked + label:before{
 }
 .homes:before{
     content:" ";
-    background: url("../images/btn_home_menu_01_normal.png") no-repeat center;
+    background: url("../images/shops/btn_home_menu_01_normal.png") no-repeat center;
     background-size: 26px;
     height: 22px;
 }
 .ifications:before{
     content:" ";
-    background: url("../images/btn_home_menu_02_normal.png") no-repeat center;
+    background: url("../images/shops/btn_home_menu_02_normal.png") no-repeat center;
     background-size: 24px;
     height: 22px;
 }
 .shopping:before{
     content:" ";
-    background: url("../images/btn_home_menu_03_normal.png") no-repeat center;
+    background: url("../images/shops/btn_home_menu_03_normal.png") no-repeat center;
     background-size: 25px;
     height: 22px;
 }
 .personal:before{
     content:" ";
-    background: url("../images/btn_home_menu_04_normal.png") no-repeat center;
+    background: url("../images/shops/btn_home_menu_04_normal.png") no-repeat center;
     background-size: 26px;
     height: 22px;
 }
@@ -375,16 +394,16 @@ input[type=radio]:checked + label:before{
     color: #FFCE70;
 }
 .homes.pressed:before{
-    background-image: url("../images/btn_home_menu_01_pressed.png");
+    background-image: url("../images/shops/btn_home_menu_01_pressed.png");
 }
 .ifications.pressed:before{
-    background-image: url("../images/btn_home_menu_02_pressed.png");
+    background-image: url("../images/shops/btn_home_menu_02_pressed.png");
 }
 .shopping.pressed:before{
-    background-image: url("../images/btn_home_menu_03_pressed.png");
+    background-image: url("../images/shops/btn_home_menu_03_pressed.png");
 }
 .personal.pressed:before{
-    background-image: url("../images/btn_home_menu_04_pressed.png");
+    background-image: url("../images/shops/btn_home_menu_04_pressed.png");
 }
 /**/
 .shopping .af-badge {
@@ -405,7 +424,7 @@ input[type=radio]:checked + label:before{
     text-shadow: 0 1px 0 rgba(64,0,0,.2);
     font-style: normal;
 }
-.searchview-searchbar{width: 20rem;height: 1.6rem;box-sizing: border-box;padding: 2px 1rem;border-radius: 0.8rem;border:none;background: #e6e6e6;text-align: left;    background-image: url(../images/sous_04.png);background-repeat: no-repeat;background-size: 1.6rem;background-position:2% 0%;text-indent: 1.1rem;}
+.searchview-searchbar{width: 20rem;height: 1.6rem;box-sizing: border-box;padding: 2px 1rem;border-radius: 0.8rem;border:none;background: #e6e6e6;text-align: left;    background-image: url(../images/shops/sous_04.png);background-repeat: no-repeat;background-size: 1.6rem;background-position:2% 0%;text-indent: 1.1rem;}
 .searchview-tabs{min-width: 100%;overflow: auto;height: 2.62rem;line-height: 2.62rem;box-shadow: 0px 5px 4px #b3b3b4;white-space: nowrap;overflow-x: auto;text-align: left;}
 .searchview-tabs li{display: inline-block;width: 25%;margin-left: -1%;text-align: center;}
 .searchview-tabs li:first-child{margin-left: 0}

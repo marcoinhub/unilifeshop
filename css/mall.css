@@ -2,7 +2,7 @@
 a{text-decoration:none; color:#000;}
 .userInfo{
     height: 12.6rem;
-    background: url(../images/about.jpg) no-repeat;
+    background: url(../images/shops/about.jpg) no-repeat;
     background-size: cover;
     margin-bottom: 3%;
     position: relative;
@@ -47,7 +47,7 @@ a{text-decoration:none; color:#000;}
      position: absolute;
      right: -2px;
      content: close-quote;
-	 background:url(../images/narrowright.png) no-repeat;
+	 background:url(../images/shops/narrowright.png) no-repeat;
 	 background-size:100% 100%;
 	 width:.8rem;
 	 height:.8rem;
@@ -196,7 +196,7 @@ p {
     bottom: 0;
 }
 .homes:before {
-    background: url(../images/btn_home_menu_01_normal.png) no-repeat center;
+    background: url(../images/shops/btn_home_menu_01_normal.png) no-repeat center;
     background-size: 26px;
     height: 22px;
 }
@@ -263,15 +263,15 @@ p {
 }
 .listReg .weixin:before{
     content: '';
-    background: url(../images/weixin_03.jpg) no-repeat;
+    background: url(../images/shops/weixin_03.jpg) no-repeat;
     background-size: 1.885714286rem;
     width: 1.885714286rem;
     height: 1.885714286rem;
     position: absolute;
     top: 6px;
     left: 1.2rem;
-
 }
+
 .forgot_a a {
     float: right;
     width: 20%;
@@ -286,11 +286,11 @@ p {
     margin-bottom: 2%;
 }
 #chargeIntergral .container{
-	background:url(../images/charge.jpg) no-repeat top;
+	background:url(../images/shops/charge.jpg) no-repeat top;
 	background-size:100% auto;
 }
 #exchangeCard .container{
-	background:url(../images/integral.jpg) no-repeat top;
+	background:url(../images/shops/integral.jpg) no-repeat top;
 	background-size:100% auto;
 	margin-top: 44px;
 }
@@ -339,7 +339,7 @@ p {
 }
 .address .iconDel{
     display: block;
-    background: url(../images/edit.jpg) no-repeat 0 50%;
+    background: url(../images/shops/edit.jpg) no-repeat 0 50%;
     background-size: 40%;
     padding-left: 1.2rem;
     margin-right: 1rem;
@@ -349,7 +349,7 @@ p {
 }
 .address .iconEdit{
     display: block;
-    background: url(../images/edit.jpg) no-repeat 0 50%;
+    background: url(../images/shops/edit.jpg) no-repeat 0 50%;
     background-size: 40%;
     padding-left: 1.2rem;
     float: right;
@@ -621,11 +621,11 @@ border-left:1px  #e5e5e5 solid ;
     width: 33.3%;
 }
 .board .unused{
-    background: url(../images/coupons.png) no-repeat;
+    background: url(../images/shops/coupons.png) no-repeat;
     background-size: 100% 100%;
 }
 .board .unused:hover{
-    background: url(../images/coupons_x.png) no-repeat;
+    background: url(../images/shops/coupons_x.png) no-repeat;
     background-size: 100% 100%;
 }
 .board .discount{
@@ -636,11 +636,11 @@ border-left:1px  #e5e5e5 solid ;
     margin-top: 6%;
 }
 .board .out-time{
-    background: url(../images/coupons_f.png) no-repeat;
+    background: url(../images/shops/coupons_f.png) no-repeat;
     background-size: 100% 100%;
 }
 .board .used{
-    background: url(../images/coupons_u.png) no-repeat;
+    background: url(../images/shops/coupons_u.png) no-repeat;
     background-size: 100% 100%;
 }
 .discount span:first-child{
@@ -717,7 +717,7 @@ border-left:1px  #e5e5e5 solid ;
 #coupon .ms{
     width: 44px;
     height: 44px;
-    background: url(../images/coupon_ms.png) no-repeat center;
+    background: url(../images/shops/coupon_ms.png) no-repeat center;
     background-size: 50% 50%;
 }
 .coupon-board{  width: 91%;  margin: .9rem 0rem 3rem 9%;  border-left: #E5E5E7 2px solid;padding:0 .9rem;box-sizing: border-box;}
@@ -732,16 +732,16 @@ border-left:1px  #e5e5e5 solid ;
 .single-coupon .content .p1{margin:1.1rem auto;font-size: 1.1rem;}
 .single-coupon .content .p2{font-size: .7rem;line-height: .9rem;  font-weight: 100;  height: 2.7rem;  letter-spacing: .13em;text-overflow: ellipsis;  overflow: hidden;}
 .single-coupon .time{font-size: .9rem;line-height: 2.7rem;font-weight: 100;}
-.coupon-global{background: url("../images/bg_full_court.png") no-repeat;background-size: 100% 100%;}
-.coupon-shop{background: url("../images/bg_shop.png") no-repeat;background-size: 100% 100%}
-.coupon-fail{background: url("../images/bg_has_failed.png") no-repeat;background-size: 100% 100%}
+.coupon-global{background: url("../images/shops/bg_full_court.png") no-repeat;background-size: 100% 100%;}
+.coupon-shop{background: url("../images/shops/bg_shop.png") no-repeat;background-size: 100% 100%}
+.coupon-fail{background: url("../images/shops/bg_has_failed.png") no-repeat;background-size: 100% 100%}
 .notice{width: 21.5rem;text-align: center; font-size: .8rem;  line-height: 2rem;  background: #FF6163;  color: rgba(255,255,255,.7);  border-radius: 1rem;  margin: .8rem auto;}
 .notice i{font-size: 1.2rem;color: #fff;font-style: normal}
 .a_list_goods{
 	width:40%;
 	margin:10% auto;
 	height:3rem;
-	background:#fff url(../images/kefu_icon.png) no-repeat 10% 10%;
+	background:#fff url(../images/shops/kefu_icon.png) no-repeat 10% 10%;
 	background-size:3rem 3rem;
 	text-align:right;
 	font-size:1rem;
@@ -840,7 +840,7 @@ border-left:1px  #e5e5e5 solid ;
 
 
 .activity_xiang{ position:relative;}
-.activity_xiang .activity_x{ position:absolute; left:0; top:0; width:100%; height:100%; overflow:hidden}
+.activity_xiang .activity_x{ position:absolute; left:0; top:0; width:100%; height:100%; overflow:hidden; z-index:44}
 .activity_x a{ width:50%; float:left; height:100%;}
 
 .a_shang{ position:relative;}
@@ -861,3 +861,13 @@ border-left:1px  #e5e5e5 solid ;
 .doublue_a img{ width:100%; display:block}
 .a_boul{ position:absolute; top:0; left:0;}
 .a_doubl{position:fixed; top:0; left:0; z-index:5}
+
+.chocolate_a{position:absolute; top:0; left:0; width:100%;height:100%; overflow:hidden; z-index:4}
+.chocolate_a span{ width:50%; float:left; color:#FF5F55; font-size:2rem; font-weight:bold;text-align:center; margin-top:61%}
+.chocolate_a span i{ font-style:normal; font-size:1.2rem; font-weight:100; }
+
+.a_christmas{ position:fixed; right:0; top:34%; width:15%;}
+.a_christmas li{ margin-top:13%;}
+.a_christmas img{ width:100%;}
+
+

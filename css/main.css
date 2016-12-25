@@ -244,7 +244,7 @@ body .a_search_1{
 	height: 28px;
 	border-radius: 14px;
 	border: 0;
-	background: #fff url("../images/sous_03.jpg") no-repeat 3% 50%;
+	background: #fff url("../images/shops/sous_03.jpg") no-repeat 3% 50%;
 	padding-left: 2.2rem;
 	background-size: 21px;
 	line-height: 28px;
@@ -274,7 +274,7 @@ body .a_search_1{
 	display: inline-block;
 	right: -5px;
 	top: 5px;
-	background: url('../images/city_drop_down.png') no-repeat;
+	background: url('../images/shops/city_drop_down.png') no-repeat;
 	background-size: 60%;
 }
 /*s搜索结束*/
@@ -512,7 +512,7 @@ header{
 
 }
 .back{
-	background:url(../images/back_back.png)  no-repeat;
+	background:url(../images/shops/back_back.png)  no-repeat;
 	background-size: 50%;
 	background-position: 50% ;
 	position:absolute;
@@ -623,7 +623,7 @@ header{
 
 #ptimumcard .asc:after{
 	content:'';
-	background:url("../images/arrow_up_active.png") no-repeat 90% 10px;
+	background:url("../images/shops/arrow_up_active.png") no-repeat 90% 10px;
 	background-size:10px;
 	position: absolute;
 	right: 2px;
@@ -634,7 +634,7 @@ header{
 }
 #ptimumcard .desc:before{
 	content:'';
-	background:url("../images/arrow_down_active.png") no-repeat 90% 0px;
+	background:url("../images/shops/arrow_down_active.png") no-repeat 90% 0px;
 	background-size:10px;
 	position: absolute;
 	right: 2px;
@@ -646,7 +646,7 @@ header{
 
 .pt_screening .pt_screening_default:after,.pt_screening .pt_screening_default:after{
 	content:'';
-	background:url("../images/arrow_up_inactive.png") no-repeat 90% 10px;
+	background:url("../images/shops/arrow_up_inactive.png") no-repeat 90% 10px;
 	background-size:10px;
 	position: absolute;
 	right: 2px;
@@ -657,7 +657,7 @@ header{
 }
 .pt_screening .pt_screening_default:before,.pt_screening .pt_screening_default:before{
 	content:'';
-	background:url("../images/arrow_down_inactive.png") no-repeat 90% 0px;
+	background:url("../images/shops/arrow_down_inactive.png") no-repeat 90% 0px;
 	background-size:10px;
 	position: absolute;
 	right: 2px;
@@ -811,7 +811,7 @@ header{
 }
 .youhuishuoming_uot:after {
 	content: '';
-	background: url("../images/back_shang.png") no-repeat;
+	background: url("../images/shops/back_shang.png") no-repeat;
 	position: absolute;
 	height: 25px;
 	width: 33px;
@@ -871,7 +871,7 @@ header{
 	border-radius: 2rem;
 	display: block;
 	margin-bottom: 7px;
-	background: #fff url("../images/sous_03.jpg") no-repeat 3% 50%;
+	background: #fff url("../images/shops/sous_03.jpg") no-repeat 3% 50%;
 	background-size: 21px;
 	padding-left: 2.2rem;
 	text-align: left;
@@ -972,7 +972,7 @@ header{
 	z-index: 9999999;
 	width: 31px;
 	height: 31px;
-	background: url("../images/btn_close_normal.png") no-repeat;
+	background: url("../images/shops/btn_close_normal.png") no-repeat;
 	background-size: 31px 31px;
 }
 .a_fenleis:before,.a_fenleis_a:before {
@@ -1169,7 +1169,7 @@ header{
 	height: 2.1rem;
 	border-radius: .2rem;
 	border: 1px solid #DBDBDB;
-	background:#fff url("../images/sous_03.jpg") no-repeat 2% 50%;
+	background:#fff url("../images/shops/sous_03.jpg") no-repeat 2% 50%;
 	padding-left: 9%;
 	background-size:7%;
 	font-size: .9rem;
@@ -1254,7 +1254,7 @@ header{
 .a_send dd{
 	float: left;
 	width: 80%;
-	background: #FFFFFF url("../images/back_shang.png") no-repeat 20% 12%;
+	background: #FFFFFF url("../images/shops/back_shang.png") no-repeat 20% 12%;
 	background-size: 17px;
 	margin-left: 3%;
 }
@@ -1441,7 +1441,7 @@ header{
 	width: 33%;
 	float: left;
 	height: 60px;
-	background: url("../images/cart_04.jpg") no-repeat 52% 50%;
+	background: url("../images/shops/cart_04.jpg") no-repeat 52% 50%;
 	background-size: 37px 37px;
 	margin-right: 2%;
 	position: relative;
@@ -1633,7 +1633,7 @@ header{
 .a_yiguo dd{
 	float: left;
 	width: 67%;
-	background: #FFFFFF url("../images/back_shang.png") no-repeat 20% 12%;
+	background: #FFFFFF url("../images/shops/back_shang.png") no-repeat 20% 12%;
 	background-size: 17px;
 	margin-left: 3%;
 	padding-right: 3%;
@@ -1684,7 +1684,7 @@ header{
 	line-height: 34px;
 }
 .header_a a{
-	background: #f9f9f9 url("../images/back_back.png") no-repeat;
+	background: #f9f9f9 url("../images/shops/back_back.png") no-repeat;
 	background-size: 26px;
 	color: #fff;
 	display: block;
@@ -1905,7 +1905,7 @@ header{
 	height: 2.1rem;
 	border-radius: .2rem;
 	border: 1px solid #DBDBDB;
-	background:#fff url("../images/sous_03.jpg") no-repeat 2% 50%;
+	background:#fff url("../images/shops/sous_03.jpg") no-repeat 2% 50%;
 	padding-left: 9%;
 	background-size: 7%;
 	font-size: .9rem;
@@ -1927,7 +1927,7 @@ header{
 	text-align: center;
 	line-height: 2.7rem;
 	color: #575757;
-	background: url("../images/bar_03.jpg") no-repeat right center;
+	background: url("../images/shops/bar_03.jpg") no-repeat right center;
 	background-size:1% 60%;
 	font-size: .9rem;
 	position: relative;
@@ -1944,7 +1944,7 @@ header{
 
 header .screening  .asc:after{
 	content:'';
-	background:url("../images/up_a.png") no-repeat 90% 10px;
+	background:url("../images/shops/up_a.png") no-repeat 90% 10px;
 	background-size:10px;
 	position: absolute;
 	right: 10px;
@@ -1955,7 +1955,7 @@ header .screening  .asc:after{
 }
 header .screening  .desc:before{
 	content:'';
-	background:url("../images/bottom_a.png") no-repeat 90% 0px;
+	background:url("../images/shops/bottom_a.png") no-repeat 90% 0px;
 	background-size:10px;
 	position: absolute;
 	right: 10px;
@@ -1967,7 +1967,7 @@ header .screening  .desc:before{
 
 .screening .screening_default:after,.screening .screening_default:after{
 	content:'';
-	background:url("../images/up.png") no-repeat 90% 10px;
+	background:url("../images/shops/up.png") no-repeat 90% 10px;
 	background-size:12px;
 	position: absolute;
 	right: 10px;
@@ -1978,7 +1978,7 @@ header .screening  .desc:before{
 }
 .screening .screening_default:before,.screening .screening_default:before{
 	content:'';
-	background:url("../images/bottom.png") no-repeat 90% 0px;
+	background:url("../images/shops/bottom.png") no-repeat 90% 0px;
 	background-size:12px;
 	position: absolute;
 	right: 10px;
@@ -2019,7 +2019,7 @@ header .screening  .desc:before{
 	height: 2.1rem;
 	border-radius: .2rem;
 	border: 1px solid #DBDBDB;
-	background:#fff url("../images/sous_03.jpg") no-repeat 2% 50%;
+	background:#fff url("../images/shops/sous_03.jpg") no-repeat 2% 50%;
 	padding-left: 9%;
 	background-size:7%;
 	color: #9C9C9C;
@@ -2145,7 +2145,7 @@ header .screening  .desc:before{
 	height: 1.2rem;
 	margin-left: 21%;
 	margin-top: 60%;
-	background: url("../images/want_br.png") no-repeat;
+	background: url("../images/shops/want_br.png") no-repeat;
 	background-size: 100% 100%;
 	border: 0;
 }
@@ -2313,7 +2313,7 @@ header .screening  .desc:before{
 }
 
 .settlement dt input[type='checkbox']:checked{
-	background: url("../images/want_br.png") no-repeat;
+	background: url("../images/shops/want_br.png") no-repeat;
 	background-size:100%;
 	border-radius:10px;
 	border: 0;
@@ -2377,7 +2377,7 @@ header .screening  .desc:before{
 	height:1.45rem;
 	margin-left:21%;
 	margin-top: 57%;
-	background: url("../images/want_br.png") no-repeat;
+	background: url("../images/shops/want_br.png") no-repeat;
 	background-size: 100% 100%;
 }
 
@@ -2494,7 +2494,7 @@ header .screening  .desc:before{
 	height: 1.2rem;
 	margin-left: 21%;
 	margin-top: 60%;
-	background: url("../images/want_br.png") no-repeat;
+	background: url("../images/shops/want_br.png") no-repeat;
 	background-size: 100% 100%;
 	border: 0;
 }
@@ -2598,7 +2598,7 @@ header .screening  .desc:before{
 }
 .hassub:after{
 	content:'';
-	background: url("../images/back_shang.png") no-repeat;
+	background: url("../images/shops/back_shang.png") no-repeat;
 	position:absolute;
 	height:25px;
 	width:33px;
@@ -3001,7 +3001,7 @@ header .screening  .desc:before{
 	}
 .youhui_small:after {
     content: '';
-    background: url(../images/back_shang.png) no-repeat;
+    background: url(../images/shops/back_shang.png) no-repeat;
     position: absolute;
     height: 25px;
     width: 33px;
@@ -3085,13 +3085,13 @@ header .screening  .desc:before{
 	}
 	
 .favorable_s input[type='radio']:checked {
-    background: url(../images/want_br.png) no-repeat;
+    background: url(../images/shops/want_br.png) no-repeat;
     background-size: 100%;
     border-radius: 10px;
     border: 0;
 }
 .favorable_smolla_a input[type='radio'] {
-    background: url(../images/want_br.png) no-repeat;
+    background: url(../images/shops/want_br.png) no-repeat;
     background-size: 100%;
     border-radius: 10px;
     border: 0;
@@ -3134,7 +3134,7 @@ header .screening  .desc:before{
 	float: right;
 	text-align: right;
 	padding-right: 1.2rem;
-	width: 77%;
+	width: 70%;
 }
 .payment_ag_1{
 	padding-top: 6%;
@@ -3227,22 +3227,22 @@ header .screening  .desc:before{
 .coupons_b{
 	width: 96%;
 	margin: 0 auto;
-	background: url("../images/coupons.png") no-repeat;
+	background: url("../images/shops/coupons.png") no-repeat;
 	background-size: 100% 100%;
 	overflow: hidden;
 	height: 6rem;
 	margin-top: 6%;
 }
 .coupons_bx{
-	background: url("../images/coupons_x.png") no-repeat;
+	background: url("../images/shops/coupons_x.png") no-repeat;
 	background-size: 100% 100%;
 }
 .coupons_bg .coupons_bf{
-	background: url("../images/coupons_f.png") no-repeat;
+	background: url("../images/shops/coupons_f.png") no-repeat;
 	background-size: 100% 100%;
 }
 .coupons_bg .coupons_bf2{
-	background: url("../images/coupons_u.png") no-repeat;
+	background: url("../images/shops/coupons_u.png") no-repeat;
 	background-size: 100% 100%;
 }
 .coupons_bg .coupons_bf dt span{
@@ -3367,7 +3367,7 @@ header .screening  .desc:before{
 }
 .myShipping dd:nth-of-type(2) span {
 	display: block;
-	background: url(../images/edit.jpg) no-repeat;
+	background: url(../images/shops/edit.jpg) no-repeat;
 	background-size: 80%;
 	background-position: 0%;
 }
@@ -3410,7 +3410,7 @@ header .screening  .desc:before{
 	margin: 0;
 }
 .back{
-	background:url(../images/back_back.png)  no-repeat;
+	background:url(../images/shops/back_back.png)  no-repeat;
 	background-size: 50%;
 	background-position: 50% ;
 	position:absolute;
@@ -3488,12 +3488,12 @@ header .screening  .desc:before{
 }
 
  input.toggle+label{
-    background:#E6E6E6 url("../images/btn_switch_slider_off.png") no-repeat 1px;
+    background:#E6E6E6 url("../images/shops/btn_switch_slider_off.png") no-repeat 1px;
     background-size: 24px 24px;
 }
 
  input.toggle:checked+label {
-    background: #FFFFFF url("../images/btn_switch_slider_on.png") no-repeat 21px;
+    background: #FFFFFF url("../images/shops/btn_switch_slider_on.png") no-repeat 21px;
     background-size: 24px 24px;
     border: 1px solid #8BC53E;
     -webkit-transition: background 150ms;
@@ -3530,7 +3530,7 @@ header .screening  .desc:before{
 	}
 .a_shaixuan .brand_t:after{
 	content: "";
-    background: url(../images/up.png) no-repeat;
+    background: url(../images/shops/up.png) no-repeat;
     background-size: 100%;
     position: absolute;
     right: 7%;
@@ -3569,7 +3569,7 @@ header .screening  .desc:before{
 	background:#E2E1E6;
 	}
 .brand_yu .brand_yu_blak{
-	background:#FFFFFF url(../images/icon_as.png) no-repeat 10% 40%;
+	background:#FFFFFF url(../images/shops/icon_as.png) no-repeat 10% 40%;
 	background-size:14%;
 	border:1px solid #9CCE5A;	
 	}
@@ -3597,7 +3597,7 @@ header .screening  .desc:before{
 }
 .brand_ard:after{
 	content: "";
-    background: url(../images/bottom.png) no-repeat;
+    background: url(../images/shops/bottom.png) no-repeat;
     background-size: 100%;
     position: absolute;
     right: 7%;
