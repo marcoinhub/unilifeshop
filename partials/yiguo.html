@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>一箱好货</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../3rd/mui/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../3rd/mui/app.css"/>
+    <!--/自己编写css--->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!--标准mui.js-->
+    <script src="../3rd/mui/mui.min.js"></script>
+    <!--控制字体大小的JS-->
+    <script src="../js/rem.js"></script>
+</head>
+
+<body>
+<header><a class="back" onclick="window.history.back()"></a><h1>易果专区</h1></header>
+<!--列表-->
+<div id="pullrefreshs" class="mui-content mui-scroll-wrapper">
+    <div class="mui-scroll">
+                <div class="main main_top">
+            <dl class="yiguo_a">
+                <dt>
+                    <img src="../images/153403884678357271_1280x640.jpg">
+                </dt>
+                <dd>
+                    <p>
+                        <a href="http://test.unilifemedia.com/umshop/index.html#landing">易果单卖套包680</a>
+                    </p>
+                    <span>
+                        ￥680.00
+                    </span>
+                </dd>
+            </dl>
+
+
+        </div>
+        <!--/内容结束-->
+        </div>
+    </div>
+<script>
+    mui('body').on('tap','a',function(){document.location.href=this.href;});
+    mui.init({
+        pullRefresh: {
+            container: '#pullrefreshs',
+            down: {
+
+                //callback: pulldownRefresh
+            },
+            up: {
+                contentrefresh: '正在加载...',
+                callback: pullupRefresh
+            }
+        }
+    });
+    /**
+     * 下拉刷新具体业务实现
+     */
+//    function pulldownRefresh() {
+//        setTimeout(function() {
+////            var table = document.body.querySelector('.mui-table-view');
+////            var cells = document.body.querySelectorAll('.mui-table-view-cell');
+////            for (var i = cells.length, len = i + 3; i < len; i++) {
+////                var li = document.createElement('li');
+////                li.className = 'mui-table-view-cell';
+////                li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+////                //下拉刷新，新纪录插到最前面；
+////                table.insertBefore(li, table.firstChild);
+////            }
+//           // mui('#pullrefreshs').pullRefresh().endPulldownToRefresh(); //refresh completed
+//        }, 1500);
+//    }
+    var count = 0;
+    /**
+     * 上拉加载具体业务实现
+     */
+    function pullupRefresh() {
+        setTimeout(function() {
+            mui('#pullrefreshs').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+//            var table = document.body.querySelector('.mui-table-view');
+//            var cells = document.body.querySelectorAll('.mui-table-view-cell');
+//            for (var i = cells.length, len = i + 20; i < len; i++) {
+//                var li = document.createElement('li');
+//                li.className = 'mui-table-view-cell';
+//                li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+//                table.appendChild(li);
+//            }
+        }, 1500);
+    }
+    if (mui.os.plus) {
+        mui.plusReady(function() {
+            setTimeout(function() {
+                mui('#pullrefreshs').pullRefresh().pullupLoading();
+            }, 1000);
+
+        });
+    } else {
+//        mui.ready(function() {
+////            mui('#pullrefreshs').pullRefresh().pullupLoading();
+//            mui('#pullrefreshs').pullRefresh().enablePullupToRefresh();
+//        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@charset "utf-8";
+.container{  padding-top: 0;  }
+.un-search-bar{  position: absolute;  left: 0;  top:0.5rem;  width: 100%;  height: 2.2rem;background: transparent;z-index: 20}
+.un-input-board{display: inline-block;height: 2.2rem;width: 71%;padding: 0.1rem;margin:0 2%;font-size: 1rem;background: none;border: 2px #c8c8cd solid;text-indent: 2.8rem;border-radius:1.1rem;box-sizing: content-box}
+.un-searchInput{margin:0;padding: 0 !important;width: 80% !important;height: 2.2rem !important;background: red;font-size:0.8rem!important;line-height: 1rem;background:none!important;border: none !important;}
+.un-input-board:before{content: close-quote;display: inline-block;position: absolute;background:url(../../images/sous_04.png) no-repeat center;width: 2rem;height: 2rem;left: 1rem ;background-size: 100% auto}
+.un-right-button{background:url(../../images/toggle.png) no-repeat left;width: 20%;height: 100%;background-size: 32% 72% ;border: none;text-indent: 19%}
+.un-segmented-control{width: 80% !important;display: inline-block;height:2rem !important;background: #ffffff;padding-left: 1rem}
+.mui-control-item{color:#666666 !important;font-size: 1rem}
+.mui-active{color:#3c3c3c !important;}
+.order{width:20%;position: absolute;right: 0;top: 0;border: none;height:2rem;background: #ffffff;}
+button:active{background: none}
+.order-up{display: inline-block;margin-left: 5%;width: 0;height:0;border-left:0.4rem solid transparent;border-right:0.4rem solid transparent;  border-bottom:0.6rem solid red;}
+.order-down{display: inline-block;margin-left: 5%;width: 0;height:0;border-left:0.4rem solid transparent;border-right:0.4rem solid transparent;  border-top:0.6rem solid #666666 ;}
+.un-order-list{position: absolute;width: 100%;z-index: 20;background: #ffffff;top: 2.5rem;padding-left: 1rem;color: #666666;display: none}
+.un-order-list li{border-top:1px solid #d0d0d0 ;padding:0.5rem 0}
+.un-order-list .pressed{color: #e56554}
+.un-order-content{position: relative}
+.mui-control-item:after{content: '丨'}
+.mui-control-item{padding: 0 !important;}
+#pullrefreshs{padding-bottom: 60px}
+.un-table-view{margin-top: 0 !important;}
+.un-price:before{content: '￥'}
+.un-price{color:#e65554}
+body{background: #d2d2db}
+.segmented-board-fix{position: fixed;width:100%;top: 0;left: 0;z-index: 20;display:block;box-sizing: border-box;display: none}
+.mui-media-body{text-align: left;background: #ffffff url('../../images/btn_home_menu_03_normal.png') no-repeat right;background-size: auto 100%;	font-size:1rem !important;line-height:1.5rem !important;width:100%;  height:1.5rem !important;margin-top: 0 !important; }

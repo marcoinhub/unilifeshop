@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>一箱好货</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../3rd/mui/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../3rd/mui/app.css"/>
+    <!--/自己编写css--->
+
+    <link rel="stylesheet" href="../css/main.css">
+    <!--标准mui.js-->
+    <script src="../3rd/mui/mui.min.js"></script>
+    <!--控制字体大小的JS-->
+    <script src="../js/rem.js"></script>
+    <!--jq库件--->
+    <script src="../3rd/jq/jquery.js"></script>
+    <!--自定义js-->
+
+</head>
+
+<body>
+<header><a class="back" onclick="window.history.back()"></a><h1>订单</h1></header>
+<!--列表-->
+<div class="main main_bottom_1 main_top">
+    <div class="a_address">
+        <div class="a_address_main ">
+            <div class="address_list">
+                <dl class="myShipping" >
+                    <dt><img src="../images/want_br.png" class="myShippingImg"/></dt>
+                    <dd ng-click="selectAdd(add,$index)">
+                        <span>测试&nbsp;&nbsp;&nbsp;&nbsp;13100000000</span><a>默认</a>
+                        <p>上海上海市徐汇区桂平路</p>
+                    </dd>
+                    <dd><a><img src="../images/edit.jpg" class="myShippingImgEdit"/></a></dd>
+                </dl>
+                <dl class="myShipping" >
+                    <dd ng-click="selectAdd(add,$index)">
+                        <span>测试&nbsp;&nbsp;&nbsp;&nbsp;13100000000</span>
+                        <p>上海上海市徐汇区桂平路</p>
+                    </dd>
+                    <dd><a><img src="../images/edit.jpg" class="myShippingImgEdit"/></a></dd>
+                </dl>
+
+            </div>
+            <div class="affirm">
+                添加新地址
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--地址选择-->
+
+
+
+<!--class="backButton" 返回-->
+</body>
+</html>

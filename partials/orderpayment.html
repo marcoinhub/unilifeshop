@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../css/mall.css" type="text/css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <script src="../js/confirm.js"></script>
+    <script src="../js/rem.js"></script>
+</head>
+<body id="orderpayment">
+<header><a class="back" onclick="back()"></a><h1>支付订单</h1></header>
+<div class="container">
+        <ul class="listReg">
+            <li><label >订单金额</label><span class="right" style="padding-right:1rem">￥186.00</span></li>
+            <li><label style="line-height: 1rem">账户余额<br>可用余额：￥980,676.10</label><span style="float: right;width: 50%;text-align: right;padding-right: 3%;">
+                <input type="checkbox"></span></li>
+            <li><label >还需支付：<span class="right font-red" style="padding-right:1rem">￥186.00</span></label></li>
+            <li><label class="weixin">微信支付</label><span style="float: right;width: 50%;text-align: right;padding-right: 3%;">
+                <input type="checkbox" checked="checked"></span></li>
+        </ul>
+    <div class="center">
+        <button class="btn btn-biggest btn-red " onclick="pay">确认支付</button>
+    </div>
+</div>
+</body>
+<script>
+    //返回 操作
+    function back(){
+    var con =new confirm();
+        con.init({title:'确认离开收银台',
+            info:'下单后两小时订单将被取消请尽快完成支付',
+            sure:'确认离开',
+            cancle:'继续支付'},function(response){
+            console.log(response);
+            if(response==true){
+                window.history.back();
+            }
+        })
+    }
+    function pay(){
+
+    }
+</script>
+</html>

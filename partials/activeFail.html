@@ -1,0 +1,35 @@
+<html lang="en" style="font-size: 13.5266px;"><head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../css/mall.css" type="text/css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <script src="../js/rem.js"></script>
+</head>
+    <body id="activeFail">
+        <header><a class="back" onclick="window.history.back()"></a><h1>修改密码</h1></header>
+        <div class="container" style="padding-left: 15px;padding-right: 15px;">
+            <div class="center" style="margin-top:1.942857143rem">
+                <img src="../images/fail.png" style="width: 99px;height: 99px;margin: 0 auto;">
+                <p class="font-large" style="padding-bottom:2.4rem;padding-top:1.085714286rem ">抱歉激活失败</p>
+                <p class="font-litter-Grey font-small">请仔细核对您所填写的身份信息是否与您签署的<span class="font-red">“0元购冰箱用户协议”</span>身份信息保持一致。</p>
+            </div>
+            <section style=" padding-top: 20px; padding-left: 26px; padding-right: 26px;">
+                <button class="btn btn-mid btn-white-invearse" onclick="cancel()">取消</button>
+                <button class="btn btn-mid btn-red-invearse right" onclick="again()" >重新填写</button>
+            </section>
+        </div>
+    </body>
+    <script>
+        function cancel(){
+            window.location.href="about.html"
+        }
+        function again(){
+            window.history.back();
+        }
+    </script>
+</html>

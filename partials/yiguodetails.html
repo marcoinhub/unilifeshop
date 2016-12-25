@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>一箱好货</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../3rd/mui/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../3rd/mui/app.css"/>
+    <!--/自己编写css--->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!--标准mui.js-->
+    <script src="../3rd/mui/mui.min.js"></script>
+    <!--控制字体大小的JS-->
+    <script src="../js/rem.js"></script>
+</head>
+
+<body>
+<header><a class="back" onclick="window.history.back()"></a><h1>商品详情</h1></header>
+<!--列表-->
+<div class="main main_top" >
+    <!--<div class="details_a">-->
+    <!--<span class="backButton">-->
+    <!--<img src="images/details_a_06.jpg">-->
+    <!--</span>-->
+    <!--<p>-->
+    <!--商品详情-->
+    <!--</p>-->
+    <!--<a href="#" class="">-->
+    <!--<img src="images/details_a_03.jpg">-->
+    <!--</a>-->
+    <!--</div>-->
+    <!-- 本例主要代码 Start ================================ -->
+
+    <div id="yiguo_slider" class="mui-slider" >
+        <div class="mui-slider-group mui-slider-loop" id="sliderbanner">
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="../images/yuantiao.jpg">
+                </a>
+            </div>
+            <!-- 第一张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="../images/shuijiao.jpg">
+                </a>
+            </div>
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="../images/muwu.jpg">
+                </a>
+            </div>
+            <!-- 第三张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="../images/cbd.jpg">
+                </a>
+            </div>
+            <!-- 第四张 -->
+            <div class="mui-slider-item">
+                <a href="#">
+                    <img src="../images/yuantiao.jpg">
+                </a>
+            </div>
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a href="#">
+                    <img src="../images/shuijiao.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="mui-slider-indicator">
+            <div class="mui-indicator mui-active"></div>
+            <div class="mui-indicator"></div>
+            <div class="mui-indicator"></div>
+            <div class="mui-indicator"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+        mui.init({
+            swipeBack:true //启用右滑关闭功能
+        });
+        var slider = mui("#yiguo_slider");
+        slider.slider({
+            interval: 5000
+        });
+        // document.getElementById("switch").addEventListener('toggle', function(e) {
+        // if (e.detail.isActive) {
+        // slider.slider({
+        // interval: 5000
+        // });
+        // } else {
+        // slider.slider({
+        // interval: 0
+        // });
+        // }
+        // });
+    </script>
+
+    <!-- 本例主要代码 End ================================ -->
+    <div class="details_c">
+        <p>
+
+        </p>
+        <!-- <p>
+             约 {{detail.des | number:2}}kg
+         </p>-->
+        <span>
+            套餐价格：   ￥680.00<!--<s>{{regionalizedpriced.price|currency:''}}</s>-->
+        </span>
+    </div>
+    <dl class="a_yiguo">
+        <dt>
+            套餐规则：
+        </dt>
+        <dd >
+            <p>
+                当天 16:00 前下单，订单将于24小时内发货。
+                当天16:00后下单，订单将于48小时内发货。
+                每月可免费配送4次，超过4次订单需加收30元运费
+            </p>
+        </dd>
+    </dl>
+    <div class="yiguo_ba">
+        <img src="../images/yiguo_02.jpg">
+    </div>
+
+    <!--<div class="product_instruction">-->
+    <!--<style>-->
+    <!--.product_instruction{padding-top:2px;}-->
+    <!--.product_instruction img{max-width:100%;}-->
+    <!--.product_instruction img+br{display:none;}-->
+    <!--</style>-->
+    <!--<div ng-bind-html="detail.productDetails|trustAsHtml"></div>-->
+    <!--</div>-->
+
+
+</div>
+<div class="detail_price" id="detailcart-footer" >
+    <!--<span>总计：&lt;!&ndash;{{detCartSummery.sumMounts|currency:''}}&ndash;&gt;  {{totalPrice()|currency:''}}  </span>-->
+    <p><i class="af-badge">12</i></p>
+
+    <div class="detail_pr_1" >加入购物车</div>
+    <div class="detail_pr_2">立即购买</div>
+</div>
+<!--详情结束-->
+</body>
+</html>

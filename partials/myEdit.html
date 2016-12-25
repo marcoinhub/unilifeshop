@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../css/mall.css" type="text/css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+     <script src="../3rd/jq/jquery.js"></script>
+    <!--自定义js-->
+    <script src="../js/rem.js"></script>
+    <script src="../3rd/jquery.min.js"></script>
+    <script src="../js/md5.js"></script>
+    <script src="../js/env.js"></script>
+    <script src="../js/requestHelper.js"></script>
+    <script src="../js/popList.js" async></script>
+    <script src="../js/pages/myEdit.js"></script>
+    <script src="../js/toast.js"></script>
+</head>
+<body id="myEdit">
+<header><a class="back" onclick="window.history.back()"></a><h1>编辑收货人</h1><span class="a_taocan">套餐配送区域 <img src="../images/question_mark.png"></span></header>
+<div class="container">
+    <form>
+        <ul class="listReg">
+            <li><label >收货人：</label><input type="text" placeholder="请输入收货人姓名" ></li>
+            <li><label >联系方式：</label><input type="tel" placeholder="请输入11位手机号码"></li>
+            <li class="list_boot"><label >所在地区：</label><input type="text" placeholder="请输入所在省市"  onclick="selectArea() " name='address' >
+            </li>
+            <li>
+            	<p class="a_jgd">
+                	(由于每个城市套餐不同，不支持城市修改)
+                </p>
+            </li>
+            <li><label >详细地址：</label><input type="text" placeholder="请输入街道门牌信息"   ></li>
+            <li><label>邮政编码：</label><input type="password" placeholder="请输入邮政编码"  ></li>
+        </ul>
+    </form>
+    <div class="center">
+    <button class="btn btn-biggest btn-red ">保存</button>
+     </div>
+</div>
+<div class="a_explain" style="display: none">
+    <div class="a_explain_1">
+        <h1>优惠券使用说明</h1>
+        <div class="a_explain_2">
+            <p>
+                1、 每个订单仅限使用一张优惠券，不可叠加使用。<br>2、 所有优惠券不挂失、不找零、不兑现、不抵运费。<br>3、 优惠券金额大于订单应付金额时，差额不予退回。<br>4、 包邮优惠券仅可用于抵扣一箱好货自营商品订单运费。<br>5、订单取消时优惠券自动返还，产生退换货时优惠券不再返还。<br>6、 使用优惠券抵扣部分的货款不开具发票。<br>7、 团购商品、礼品卡、特价商品及其他有特殊规定的商品不可使用优惠券。
+            </p>
+        </div>
+        <a href="javascript:;" class="cancel" id="cancel">知道了</a>
+    </div>
+</div>
+<script>
+	$(function(){
+		    $(".a_taocan").click(function () {
+        //  $(".a_ptimumcfen").hide();
+        $(".a_explain").show();
+    })
+
+    $(".cancel").click(function () {
+        //  $(".a_ptimumcfen").hide();
+        $(".a_explain").hide();
+    })
+	
+		})
+</script>
+</body>
+
+</html>

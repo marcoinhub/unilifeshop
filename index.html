@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>一箱好货</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="3rd/mui/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="3rd/mui/app.css"/>
+		<!--/自己编写css--->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!--标准mui.js-->
+		<script src="3rd/mui/mui.min.js"></script>
+		<!--控制字体大小的JS-->
+		<script src="js/rem.js"></script>
+		<script src="js/confirm.js"></script>
+		<!--/jq库-->
+		<script src="3rd/jq/jquery.js"></script>
+		<script>
+			$(window).ready(function(){
+				$("body").on("scroll", function() {
+					var scrollT =$(document).scrollTop();
+					var scrollT = parseInt(scrollT);
+					if (scrollT > 100) {
+						console.log(scrollT);
+						$(".search_a").addClass('a_search_1');
+					}else{
+						$(".search_a").removeClass('a_search_1');
+					}
+				});
+				//code
+			})
+
+		</script>
+	</head>
+
+	<body>
+
+	<!--/动画开始-->
+	<div class="preloader" style="background: #FFA836 !important;position: fixed; top: 0; left: 0;right: 0;z-index: 9999999; display: none">
+		<div id="loading">
+			<div id="loading-center">
+				<div id="loading-center-absolute">
+					<div class="object" id="object_one"></div>
+					<div class="object" id="object_two"></div>
+					<div class="object" id="object_three"></div>
+					<div class="object" id="object_four"></div>
+				</div>
+				<h1 style="text-align: center">客官稍等<br>小鲜肉正在给您上货...</h1>
+			</div>
+		</div>
+
+	</div>
+	<!--/动画结束-->
+
+		<div class="search_a" id="search-bar">
+			<span class="city" >上海</span>
+
+			<div class="search_a_left" id="search_a_hed">
+				<a href="#search">
+					<p>搜索关键字</p>
+				</a>
+			</div>
+		</div>
+	<!--下拉刷新容器-->
+	<!--<div id="pullrefresh" class="mui-content mui-scroll-wrapper">-->
+		<!--<div class="mui-scroll">-->
+			<!--&lt;!&ndash;数据列表&ndash;&gt;-->
+
+
+
+	<!--/首页内容开始-->
+	<div class="main" style="background:#f7f7f9">
+		<div class="sliderbanner_a">
+			<img src="images/shuijiao.jpg">
+		</div>
+		<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop" id="sliderbanner">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/yuantiao.jpg">
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/shuijiao.jpg">
+					</a>
+				</div>
+				<!-- 第二张 -->
+
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/shuijiao.jpg">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+
+			</div>
+		</div>
+
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+
+			});
+			var slider = mui("#slider");
+			slider.slider({
+				interval: 5000
+			});
+			// document.getElementById("switch").addEventListener('toggle', function(e) {
+			// if (e.detail.isActive) {
+			// slider.slider({
+			// interval: 5000
+			// });
+			// } else {
+			// slider.slider({
+			// interval: 0
+			// });
+			// }
+			// });
+
+		</script>
+
+		<!--/headr结束-->
+		<!---/栏位-->
+		<div class="division">
+			<div>
+				<img src="images/menu_goodprice_normal.png">
+			</div>
+			<div>
+				<img src="images/menu_goodprice_normal.png">
+			</div>
+		</div>
+		<!--/栏位结束--->
+		<!---推荐-->
+		<div class="advert">
+            <img src="images/banner_yiguo.png">
+        </div>
+        <div class="column_a">
+            <div class="column_left">
+               <img src="images/column_left.png">
+            </div>
+            <div class="column_right">
+                <div>
+                    <img src="images/column_right.png">
+                </div>
+                <div>
+                    <img src="images/column_right.png">
+                </div>
+            </div>
+        </div>
+		<!---/推荐结束-->
+		<!---品牌购-->
+		<dl class="pinpai">
+			<dt>
+				<img src="images/1_640_269.jpg" class="img">
+			</dt>
+			<dd>
+				<div class="pinpai_p">
+					<img src="images/9288695698596082_500.jpg">
+					<span>
+						吃葡萄不吐葡萄皮
+					</span>
+					<p class="mian_prie">
+						￥180 <b>$190</b>
+					</p>
+				</div>
+				<div class="pinpai_p">
+					<img src="images/9288695698596082_500.jpg">
+					<span>
+						吃葡萄不吐葡萄皮
+					</span>
+					<p class="mian_prie">
+						￥180 <b>$190</b>
+					</p>
+				</div>
+				<div class="pinpai_p">
+					<img src="images/9288695698596082_500.jpg">
+					<span>
+						吃葡萄不吐葡萄皮
+					</span>
+					<p class="mian_prie">
+						￥180 <b>$190</b>
+					</p>
+				</div>
+			</dd>
+		</dl>
+
+		<!--/品牌购结束-->
+		<!---单品推荐-->
+		<div class="a_recomm">
+			单品推荐
+		</div>
+		<div  class="exhibit_1">
+			<div class="exhibit">
+				<dl>
+					<dt >
+						<img src="images/9288696306213130_500.jpg" >
+					</dt>
+					<dd>
+						<p><b>易果</b>泰国龙眼500g</p>
+						<div class="a_cart">
+							<span>￥16.00 </span>
+							<a href="#">
+								<img src="images/cart_03.jpg" >
+							</a>
+						</div>
+					</dd>
+					<ul class="ptimumcar_a">
+						<li >
+							<img src="images/label_prop_freedelivery.png">
+						</li>
+					</ul>
+				</dl>
+
+			</div>
+			<div class="exhibit">
+				<dl>
+					<dt >
+						<img src="images/9288696306213130_500.jpg" >
+					</dt>
+					<dd>
+						<p><b>易果</b>泰国龙眼500g</p>
+						<div class="a_cart">
+							<span>￥16.00 </span>
+							<a href="#">
+								<img src="images/cart_03.jpg" >
+							</a>
+						</div>
+					</dd>
+					<ul class="ptimumcar_a">
+						<li >
+							<img src="images/label_prop_freedelivery.png">
+						</li>
+					</ul>
+				</dl>
+
+			</div>
+			<div class="clear"></div>
+			<div style="width: 100%; display: block;padding-top: 3%; padding-bottom:20%">
+				<img src="images/icon_end.png" style="display:block;width: 100%">
+			</div>
+		</div>
+	</div>
+<!--内容结束-->
+
+		<!--</div>-->
+	<!--</div>-->
+
+	<script>
+//		mui.init({
+//			pullRefresh: {
+//				container: '#pullrefresh',
+//				down: {
+//					//callback: pulldownRefresh
+//				}
+//
+//			}
+//		});
+//		/**
+//		 * 下拉刷新具体业务实现
+//		 */
+////		function pulldownRefresh() {
+////			setTimeout(function() {
+////				//var table = document.body.querySelector('.mui-table-view');
+////				//var cells = document.body.querySelectorAll('.mui-table-view-cell');
+////				//for (var i = cells.length, len = i + 3; i < len; i++) {
+////					//var li = document.createElement('li');
+////					//li.className = 'mui-table-view-cell';
+////					//li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+////					//下拉刷新，新纪录插到最前面；
+////					//table.insertBefore(li, table.firstChild);
+////				//}
+////				//mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+////			}, 1500);
+////		}
+//		var count = 0;
+//		/**
+//		 * 上拉加载具体业务实现
+//		 */
+//
+//		if (mui.os.plus) {
+//			mui.plusReady(function() {
+//				setTimeout(function() {
+//					mui('#pullrefresh').pullRefresh().pullupLoading();
+//				}, 1000);
+//
+//			});
+//		} else {
+//
+//		}
+
+	</script>
+
+<div class="bounced">
+	<p>提示问题</p>
+</div>
+
+<div class="footer">
+	<div id="user_default_footer" class="default_foot" style=" display: block" >
+		<a href="#main" class="icon homes" data-transition="slide:back">首页</a>
+		<a href="#listof" class="icon ifications" data-transition="slide">分类</a>
+		<a  class="icon shopping" >购物车<i class="af-badge">1</i></a>
+		<a class="icon personal">我的</a>
+	</div>
+</div>
+
+
+
+	<!--<script src="js/bounced.js"></script>-->
+	<!--<script src="js/main.js"></script>-->
+	<script>
+		$(window).ready(function(){
+			//code
+			setTimeout(function(){
+				$(".preloader").fadeOut('400ms');
+			}, 3000)
+
+			var con=new confirm;
+			con.init({title:'位置变更',info:'检测到您的位置发生了变化.是否切换到',cancle:'取消',sure:'好'},function(result){
+				if(result==true){
+					window.location.href = "${base}/service/appshop/account/login?province=" + $place.province + "&city=" + $place.city + "&county=" + $place.county;
+				}
+			});
+
+			$('#scroll').scroll({indicators: false});
+		})
+
+	</script>
+
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>一箱好货</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../3rd/mui/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../3rd/mui/app.css"/>
+    <!--/自己编写css--->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!--标准mui.js-->
+    <script src="../3rd/mui/mui.min.js"></script>
+    <!--控制字体大小的JS-->
+    <script src="../js/rem.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div class="search_b">
+        <div class="search_b_left">
+            <form action="./" onsubmit="return false;">
+                <input type="search" name="search" placeholder="搜索关键字" autofocus>
+            </form>
+        </div>
+        <div class="search_b_right">
+            <style>
+                .searchback:before{
+                    display: none;
+                }
+            </style>
+            <a class="backButton searchback" style="background: none"onclick="window.history.back()" >
+                取消
+            </a>
+        </div>
+    </div>
+    <!-- 热门搜索 -->
+    <dl class="hot_a">
+        <dt>
+            热门搜索
+        </dt>
+        <dd>
+            <a href="#"  >
+               苹果
+            </a>
+        </dd>
+    </dl>
+</div>
+</body>
+</html>

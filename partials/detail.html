@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>一箱好货</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../3rd/mui/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../3rd/mui/app.css"/>
+    <!--/自己编写css--->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!--标准mui.js-->
+    <script src="../3rd/mui/mui.min.js"></script>
+    <!--控制字体大小的JS-->
+    <script src="../js/rem.js"></script>
+
+    <script src="../3rd/jq/jquery.js"></script>
+    <script src="../js/ptimumcard.js"></script>
+    <script>
+        $(window).ready(function(){
+            $(".want_by_nub").focus(function(){
+                $('body').animate({scrollTop:300},1000);
+            });
+            $(".want_by_nub").blur(function(){
+                $('body').animate({scrollTop:0},1000);
+            });
+        })
+    </script>
+</head>
+
+<body>
+<div id="ptimumcard">
+    <header><a class="back" onclick="window.history.back()"></a><h1>优卡专区</h1><a href="#" class="a_home"><img src="../images/btn_home_menu_date.png"></a></header>
+</div>
+      <!--内容开始-->
+        <div class="main main_bot" >
+            <div id="det_slider" class="mui-slider" >
+                <div class="mui-slider-group mui-slider-loop" id="sliderbanner">
+                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="../images/yuantiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 第一张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/shuijiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 第二张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/muwu.jpg">
+                        </a>
+                    </div>
+                    <!-- 第三张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/cbd.jpg">
+                        </a>
+                    </div>
+                    <!-- 第四张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/yuantiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="../images/shuijiao.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+            </div>
+
+            <script type="text/javascript" charset="utf-8">
+                mui.init({
+                    swipeBack:true //启用右滑关闭功能
+                });
+                var slider = mui("#det_slider");
+                slider.slider({
+                    interval: 5000
+                });
+                // document.getElementById("switch").addEventListener('toggle', function(e) {
+                // if (e.detail.isActive) {
+                // slider.slider({
+                // interval: 5000
+                // });
+                // } else {
+                // slider.slider({
+                // interval: 0
+                // });
+                // }
+                // });
+            </script>
+
+            <div class="details_c details_stock">
+                <p>
+                   荔枝泰国龙眼500g
+                </p>
+                <!-- <p>
+                     约 {{detail.des | number:2}}kg
+                 </p>-->
+        <span>
+            ￥16.00<!--<s>{{regionalizedpriced.price|currency:''}}</s>-->
+            <div  class="a_stockIfo">
+                <i> 进入专柜></i> <img src="../images/yiguo.png" style="height:35px;">
+            </div>
+        </span>
+            </div>
+            <dl class="a_send">
+                <dt>
+                    送至
+                </dt>
+                <dd ng-click="showDeliverArea()">
+                    <p >
+                        上海<span> <!--&lt;!&ndash;{{detail.stock}}&ndash;&gt;--></span>
+
+                    </p>
+                    <p>
+                        有货
+                    </p>
+                </dd>
+            </dl>
+            <dl class="origin" ng-if="detail.promotionDesc">
+                <dt>
+                    优惠
+                </dt>
+                <dd>
+                    便宜2块钱
+                </dd>
+            </dl>
+
+            <dl class="a_number">
+                <dt>
+                    数量
+                </dt>
+                <dd>
+                    <div class="want_by_c">
+                        <button class="want_by_jian">-</button>
+                        <input type="number" class="want_by_nub" min="1" value="1" >
+                        <button class="want_by_jia">+</button>
+                    </div>
+                </dd>
+            </dl>
+            <div class="product_instruction">
+                <style>
+                    .product_instruction{padding-top:2px;}
+                    .product_instruction img{max-width:100%;}
+                    .product_instruction img+br{display:none;}
+                </style>
+                <div>
+                    <img src="../images/shuijiao.jpg">
+                    <img src="../images/shuijiao.jpg"><img src="../images/shuijiao.jpg">
+                    <img src="../images/shuijiao.jpg">
+                    <img src="../images/shuijiao.jpg">
+                    <img src="../images/shuijiao.jpg">
+                    <img src="../images/shuijiao.jpg">
+                    <img src="../images/shuijiao.jpg">
+
+                </div>
+            </div>
+        </div>
+            <!--内容结束--->
+<!--详情--->
+<div class="detail_price" id="detailcart-footer" >
+    <!--<span>总计：&lt;!&ndash;{{detCartSummery.sumMounts|currency:''}}&ndash;&gt;  {{totalPrice()|currency:''}}  </span>-->
+    <p><i class="af-badge">12</i></p>
+
+    <div class="detail_pr_1" >加入购物车</div>
+    <div class="detail_pr_2">立即购买</div>
+</div>
+<!--详情结束-->
+
+
+</body>
+</html>

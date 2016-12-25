@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link href="../css/mall.css" type="text/css" rel="stylesheet">
+        <link href="../css/common.css" type="text/css" rel="stylesheet">
+        <script src="../js/confirm.js"></script>
+        <script src="../js/rem.js"></script>
+		<style>
+             html,body{width: 100%;height: 100%;overflow: hidden;}
+            .mask{position: fixed;left: 0;top:0;right: 0;bottom: 0;background: rgba(0,0,0,0.4);z-index: 500;display: block}
+            .coupon-introduce{width: 20rem;top: 10%;height: 50%;padding: 1rem;position: fixed;left: 50%;margin-left: -11rem;background: #ffffff;z-index: 500;border-radius: 4px;display: none}
+            .coupon-introduce p:first-child{font-size: 1rem;text-align: center;line-height: 3rem}
+            .coupon-introduce p:last-child{text-align: left;text-indent: 2em;line-height: 1.5rem;font-size: .9rem;border-radius: 4px;}
+			.coupon-shops{position: fixed;margin-left:-9.25rem;padding:0.81rem;width: 18.5rem;left: 50%;top: 9rem;background: #ffffff;z-index:10000;box-sizing:border-box;max-height: 15rem;overflow: auto;border-radius:4px}
+			.coupon-shops dt{padding: 0 0 1rem;color:#818181}
+			.coupon-shops dd{line-height: 3.92rem;padding: 0.8rem;overflow: auto;box-sizing: border-box;border-bottom:1px solid #ececec;}
+			.coupon-shops dd:last-child{border-bottom:none}
+			.coupon-shops-name{float: left;margin-left:1rem}
+			.coupon-shops-img{float: left;width: 3.92rem;height: 3.92rem;border-radius: 1.96rem;border: 2px #f7f7f7 solid;box-sizing: border-box;}
+			.coupon-shops-action{color:#b1b1b1}
+        </style>
+    </head>
+    <body id="coupon">
+        <header class="font-grey font-normal"><a class="back " onclick="window.history.back()">优惠券</a><button class="ms right btn"></button><a class="right u_link">已使用</a><a class="right ud_link">已失效</a></header>
+        <div class="container" style="height: 100%;overflow: auto;background:#F5F5F7">
+            <!--    <p class="center font-large font-litter-Grey" style="height: 10rem;line-height:10rem">没有更多的优惠券</p>-->
+            <!------------------------------------------------------------------分割线------------------------------------------------------------------------------------------------------------->
+            <div class="coupon-board">
+                <dl>
+                    <dt class="font-small font-weak"><img src="../images/icon01.png">跨店通用</dt>
+                    <dd class="font-white coupon-global single-coupon">
+                        <section>
+                            <span class="money">
+                                <p class="font-superlarge">50<i class="font-largebardeg">元</i><p>
+                                <p><a href='javascript:void(0)' class="font-large">跨店通用</a></p>
+                            </span>
+                            <span class="content right">
+                                <p>全场满200元可用</p>
+                                <p>这里是规则使用说明，这里是文字说明字段20个字</p>
+                            </span>
+                        </section>
+                        <p class="time font-litter-Grey font-smallest ">有效期：2016-06-21&nbsp;&nbsp;&nbsp;&nbsp;剩余：3张<a class="font-small font-red right">立即使用</a></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="font-small font-weak"><img src="../images/icon01.png">本来生活</dt>
+                    <dd class="font-white coupon-shop single-coupon">
+                        <section>
+                            <span class="money">
+                                <p class="font-superlarge">30<i class="font-largebardeg">元</i><p>
+                                <p><a href='javascript:void(0)' class="font-large">店铺通用</a></p>
+                            </span>
+                            <span class="content right">
+                                <p>全场满200元可用</p>
+                                <p>这里是规则使用说明，这里是文字说明字段20个字</p>
+                            </span>
+                        </section>
+                        <p class="time font-litter-Grey font-smallest ">有效期：2016-06-21&nbsp;&nbsp;&nbsp;&nbsp;剩余：3张<a class="font-small font-red right">立即使用</a></p>
+                    </dd>
+                </dl>
+            </div>
+            <!-----------------------------------------------------------分割线--------------------------------------------------------------------------------->
+            <div class="mask"></div>
+            <div class="coupon-introduce font-litter-Grey">
+                <p>优惠券使用说明</p>
+                <p>优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明优惠券使用说明</p>
+            </div>
+            <div class="coupon-shops">
+			<dl>
+				<dt class=" center font-grey font-small">以下店铺可以使用优惠券</dt>
+				<dd>
+					<img class="coupon-shops-img" src="../images/icon01.png">
+					<span class="coupon-shops-name font-normal">1号店</span>
+					<a src="javascript:void(0)"class='right font-litter-Grey coupon-shops-action font-smaller'>进入店铺 ></a>
+				</dd>
+			</dl>
+			</div>
+        </div>
+    </body>
+    <script>
+        (function (win,dom){
+            dom.querySelector('.ms').addEventListener('click',function(){dom.querySelector('.mask').style.display='block';dom.querySelector('.coupon-introduce').style.display='block'});
+            dom.querySelector('.mask').addEventListener('click',function(){dom.querySelector('.coupon-introduce').style.display='none'});
+        })(window,document)
+    </script>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>一箱好货</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../3rd/mui/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../3rd/mui/app.css"/>
+    <!--/自己编写css--->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!--标准mui.js-->
+    <script src="../3rd/mui/mui.min.js"></script>
+    <!--控制字体大小的JS-->
+    <script src="../js/rem.js"></script>
+</head>
+
+<body>
+<div id="ptimumcard">
+    <header><a class="back" onclick="window.history.back()"></a><h1>优卡专区</h1></header>
+    <div class="noImageHead">
+        <div class="a_search_b_left">
+            <form action="./" onsubmit="return false;">
+                <input type="search" name="search" placeholder="搜索关键字">
+            </form>
+            <p class="fenlei_a" >
+                <img src="../images/btn_ucard_cataloglist_normal_a.png">
+                    <span class="a_shefen">
+                    分类
+                    </span>
+            </p>
+        </div>
+
+        <div class="pt_screening">
+                <span class="pt_screening_def">
+                    综合
+                </span>
+                <span class="a_prie desc asc">
+                    价格
+                </span>
+                <span class="pt_screening_default">
+                    销量
+                </span>
+                <span>
+                    最新
+                </span>
+        </div>
+    </div>
+</div>
+<!--下拉刷新容器-->
+
+<div id="pullrefreshs" class="mui-content mui-scroll-wrapper">
+    <div class="mui-scroll">
+        <!--数据列表-->
+            <!--内容开始-->
+
+        <div class="main" >
+            <div id="pitmu_slider" class="mui-slider" >
+                <div class="mui-slider-group mui-slider-loop" id="sliderbanner">
+                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="../images/yuantiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 第一张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/shuijiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 第二张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/muwu.jpg">
+                        </a>
+                    </div>
+                    <!-- 第三张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/cbd.jpg">
+                        </a>
+                    </div>
+                    <!-- 第四张 -->
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="../images/yuantiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="../images/shuijiao.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+            </div>
+
+            <script type="text/javascript" charset="utf-8">
+                mui.init({
+                    swipeBack:true //启用右滑关闭功能
+                });
+                var slider = mui("#pitmu_slider");
+                slider.slider({
+                    interval: 5000
+                });
+                // document.getElementById("switch").addEventListener('toggle', function(e) {
+                // if (e.detail.isActive) {
+                // slider.slider({
+                // interval: 5000
+                // });
+                // } else {
+                // slider.slider({
+                // interval: 0
+                // });
+                // }
+                // });
+            </script>
+            <div class="productListDiv">
+                <div class="exhibit" style="margin-right: 2%;">
+                    <dl>
+                        <dt >
+                            <img src="../images/9288696306213130_500.jpg" >
+                        </dt>
+                        <dd>
+                            <p><b>易果</b>泰国龙眼500g</p>
+                            <div class="a_cart">
+                                <span>￥16.00 </span>
+                                <a href="#">
+                                    <img src="../images/cart_03.jpg" >
+                                </a>
+                            </div>
+                        </dd>
+                        <ul class="ptimumcar_a">
+                            <li >
+                                <img src="../images/label_prop_freedelivery.png">
+                            </li>
+                        </ul>
+                    </dl>
+                </div>
+                <div class="exhibit">
+                    <dl>
+                        <dt >
+                            <img src="../images/9288696306213130_500.jpg" >
+                        </dt>
+                        <dd>
+                            <p><b>易果</b>泰国龙眼500g</p>
+                            <div class="a_cart">
+                                <span>￥16.00 </span>
+                                <a href="#">
+                                    <img src="../images/cart_03.jpg" >
+                                </a>
+                            </div>
+                        </dd>
+                        <ul class="ptimumcar_a">
+                            <li >
+                                <img src="../images/label_prop_freedelivery.png">
+                            </li>
+                        </ul>
+                    </dl>
+                </div>
+            </div>
+            <div class="ofgoods_b">
+                <p  class= "search_result_empty">暂无结果</p>
+
+                <div class="exhibit" style="margin-right: 2%;">
+                    <dl>
+                        <dt >
+                            <img src="../images/9288696306213130_500.jpg" >
+                        </dt>
+                        <dd>
+                            <p><b>易果</b>泰国龙眼500g</p>
+                            <div class="a_cart">
+                                <span>￥16.00 </span>
+                                <a href="#">
+                                    <img src="../images/cart_03.jpg" >
+                                </a>
+                            </div>
+                        </dd>
+                        <ul class="ptimumcar_a">
+                            <li >
+                                <img src="../images/label_prop_freedelivery.png">
+                            </li>
+                        </ul>
+                    </dl>
+                    <dl>
+                        <dt >
+                            <img src="../images/9288696306213130_500.jpg" >
+                        </dt>
+                        <dd>
+                            <p><b>易果</b>泰国龙眼500g</p>
+                            <div class="a_cart">
+                                <span>￥16.00 </span>
+                                <a href="#">
+                                    <img src="../images/cart_03.jpg" >
+                                </a>
+                            </div>
+                        </dd>
+                        <ul class="ptimumcar_a">
+                            <li >
+                                <img src="../images/label_prop_freedelivery.png">
+                            </li>
+                        </ul>
+                    </dl>
+                    <dl>
+                        <dt >
+                            <img src="../images/9288696306213130_500.jpg" >
+                        </dt>
+                        <dd>
+                            <p><b>易果</b>泰国龙眼500g</p>
+                            <div class="a_cart">
+                                <span>￥16.00 </span>
+                                <a href="#">
+                                    <img src="../images/cart_03.jpg" >
+                                </a>
+                            </div>
+                        </dd>
+                        <ul class="ptimumcar_a">
+                            <li >
+                                <img src="../images/label_prop_freedelivery.png">
+                            </li>
+                        </ul>
+                    </dl>
+                    <dl>
+                        <dt >
+                            <img src="../images/9288696306213130_500.jpg" >
+                        </dt>
+                        <dd>
+                            <p><b>易果</b>泰国龙眼500g</p>
+                            <div class="a_cart">
+                                <span>￥16.00 </span>
+                                <a href="#">
+                                    <img src="../images/cart_03.jpg" >
+                                </a>
+                            </div>
+                        </dd>
+                        <ul class="ptimumcar_a">
+                            <li >
+                                <img src="../images/label_prop_freedelivery.png">
+                            </li>
+                        </ul>
+                    </dl>
+                    <dl>
+                        <dt >
+                            <img src="../images/9288696306213130_500.jpg" >
+                        </dt>
+                        <dd>
+                            <p><b>易果</b>泰国龙眼500g</p>
+                            <div class="a_cart">
+                                <span>￥16.00 </span>
+                                <a href="#">
+                                    <img src="../images/cart_03.jpg" >
+                                </a>
+                            </div>
+                        </dd>
+                        <ul class="ptimumcar_a">
+                            <li >
+                                <img src="../images/label_prop_freedelivery.png">
+                            </li>
+                        </ul>
+                    </dl>
+                    <dl>
+                        <dt >
+                            <img src="../images/9288696306213130_500.jpg" >
+                        </dt>
+                        <dd>
+                            <p><b>易果</b>泰国龙眼500g</p>
+                            <div class="a_cart">
+                                <span>￥16.00 </span>
+                                <a href="#">
+                                    <img src="../images/cart_03.jpg" >
+                                </a>
+                            </div>
+                        </dd>
+                        <ul class="ptimumcar_a">
+                            <li >
+                                <img src="../images/label_prop_freedelivery.png">
+                            </li>
+                        </ul>
+                    </dl>
+                    <dl>
+                        <dt >
+                            <img src="../images/9288696306213130_500.jpg" >
+                        </dt>
+                        <dd>
+                            <p><b>易果</b>泰国龙眼500g</p>
+                            <div class="a_cart">
+                                <span>￥16.00 </span>
+                                <a href="#">
+                                    <img src="../images/cart_03.jpg" >
+                                </a>
+                            </div>
+                        </dd>
+                        <ul class="ptimumcar_a">
+                            <li >
+                                <img src="../images/label_prop_freedelivery.png">
+                            </li>
+                        </ul>
+                    </dl>
+                </div>
+                <div class="exhibit">
+                    <dl>
+                        <dt >
+                            <img src="../images/9288696306213130_500.jpg" >
+                        </dt>
+                        <dd>
+                            <p><b>易果</b>泰国龙眼500g</p>
+                            <div class="a_cart">
+                                <span>￥16.00 </span>
+                                <a href="#">
+                                    <img src="../images/cart_03.jpg" >
+                                </a>
+                            </div>
+                        </dd>
+                        <ul class="ptimumcar_a">
+                            <li >
+                                <img src="../images/label_prop_freedelivery.png">
+                            </li>
+                        </ul>
+                    </dl>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--分类--->
+<div class="a_ptimumcfen" >
+
+    <div style="width: 100%; height: 100%;position: relative">
+        <div class="a_fenleis">
+
+        </div>
+        <ul class="fenlei_ab_bb" >
+            <li>
+                分类
+            </li>
+            <li>
+                分类
+            </li>
+            <li>
+                分类
+            </li>
+            <li>
+                分类
+            </li>
+        </ul>
+    </div>
+</div>
+<!--分类结束--->
+<!--价格-->
+<div class="a_ptimumcfen_a" >
+    <div class="a_fenleis_a">
+
+    </div>
+    <div style="overflow: hidden; width: 70%; margin: 0 auto; background: #fff;  margin-top: 60px; border-radius: 1rem;padding-bottom: 20px;">
+        <ul class="fenlei_ab_b">
+            <li >
+                价格从低到高
+            </li>
+            <li>
+                价格从高到低
+            </li>
+        </ul>
+        <div class="a_qujian">
+            <p>
+                按价格区间筛选
+            </p>
+            <div class="a_qujian_b">
+                <input ng-model="beginPrice"placeholder="最低价"type="number"><i>-</i><input ng-model="endPrice" placeholder="最高价" type="number" >
+                <span ng-click="selectPriceList()">确认</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--价格结束-->
+<div class="mask" style="position: fixed;left: 0;top: 0;bottom: 0;right: 0;z-index: 10000;background: rgba(0,0,0,0.7);display: none">
+    <button  id="miss" style="float: left;display: block;width: 10%;height: 100%;background: transparent;border: none"></button>
+    <div style="float: left;background: #ffffff;width: 90%;height: 100%;transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1.0);transform:translate3D(100%,0,0)">
+        <ul class="searchview-tabs center">
+            <li><button class="btn font-litter-Grey searchview-tabs-active" tabindex="0">生鲜食材</button></li>
+            <li><button class="btn font-litter-Grey" tabindex="1">生鲜食材</button></li>
+            <li><button class="btn font-litter-Grey" tabindex="2">生鲜食材</button></li>
+            <li><button class="btn font-litter-Grey" tabindex="3">生鲜食材</button></li>
+        </ul>
+        <div class="searchview-kind " tabindex="0">
+            <dl>
+                <dt>新鲜水果 <a class="right" onclick='choosed()'>全部 >></a></dt>
+                <dd>
+                    <ul class="searchview-kind-ul">
+                        <li class="searchview-kind-li"><a class="btn searchview-kind-button" onclick='choosed()'>国产水果</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <div class="searchview-kind searchview-kind-show" tabindex="1">
+            <dl>
+                <dt>海鲜水产 <a class="right" onclick='choosed()'>全部 >></a></dt>
+                <dd>
+                    <ul class="searchview-kind-ul">
+                        <li class="searchview-kind-li"><a class="btn searchview-kind-button" onclick='choosed()' >国产水果</a></li>
+
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <div class="searchview-kind " tabindex="2">
+            <dl>
+                <dt>肉禽蛋类 <a class="right" onclick='choosed()'>全部 >></a></dt>
+                <dd>
+                    <ul class="searchview-kind-ul">
+                        <li class="searchview-kind-li"><a class="btn searchview-kind-button" onclick='choosed()'>国产水果</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <div class="searchview-kind " tabindex="3">
+            <p class="center font-litter-Grey" style="height: 6rem;font-size: 1.5rem;line-height: 6rem">暂时没有这个分类的商品</p>
+        </div>
+    </div>
+</div>
+<script src="../3rd/jq/jquery.js"></script>
+<script>
+	function choosed(){
+	 var  self=$('#miss');
+	 var percent=0
+     var timer=setInterval(function(){
+     var translate='translate3D('+percent+'%,0,0)';
+     $(self).next().css('transform',translate);
+     if(percent>=100){
+          window.clearInterval(timer);
+          return;
+        }
+        percent++;
+		},1)
+    var ttimer=setTimeout(function(){
+        $('.mask').css('display','none');
+        },800)
+       }
+	
+    (function (){
+			
+            $('.a_shefen').on('click',function(){
+                var percent=100;
+                $('.mask').css('display','block');
+                var mtimer=setInterval(function(){
+
+                    var translate='translate3D('+percent+'%,0,0)';
+                    $('.mask div').css('transform',translate);
+                    if(percent<=0){
+                        window.clearInterval(mtimer);
+                        return;
+                    }
+                    percent--;
+                },1)
+            })
+            $('.searchview-tabs button').on('click',function(){
+            $('.searchview-tabs button').each(function(){$(this).removeClass('searchview-tabs-active');});
+            $(this).addClass('searchview-tabs-active');
+            var tabindex=$(this).attr('tabindex');
+            $('.searchview-kind-show').removeClass('searchview-kind-show');
+            $('.searchview-kind').each(function(){if($(this).attr('tabindex').match(tabindex)){$(this).addClass('searchview-kind-show');}});})
+            $('.searchview-kind-button').on('click',function(){$('.searchview-kind-button').each(function(){$(this).removeClass('searchview-kind-active')});$(this).addClass('searchview-kind-active')});
+            $('#miss').on('click',function(){
+                var self=this;
+                var percent=0
+                var timer=setInterval(function(){
+                    var translate='translate3D('+percent+'%,0,0)';
+                    $(self).next().css('transform',translate);
+                    if(percent>=100){
+                        window.clearInterval(timer);
+                        return;
+                    }
+                    percent++;
+                },1)
+                var ttimer=setTimeout(function(){
+                    $('.mask').css('display','none');
+                },800)
+               }
+            )
+    })()
+    mui.init({
+        pullRefresh: {
+            container: '#pullrefreshs',
+            down: {
+
+                //callback: pulldownRefresh
+            },
+            up: {
+               contentrefresh: '正在加载...',
+               callback: pullupRefresh
+            }
+        }
+    });
+        $('.pt_screening span').click(function(){
+            mui('#pullrefreshs').scroll().scrollTo(0,0);
+        });
+    $('.a_search_b_left input').click(function(){
+        setTimeout(function () { $('.a_search_b_left input').blur(); }, 100)
+    });
+
+    var count = 0;
+    /**
+     * 上拉加载具体业务实现
+     */
+    function pullupRefresh() {
+        setTimeout(function() {
+           mui('#pullrefreshs').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+        }, 1500);
+    }
+    if (mui.os.plus) {
+        mui.plusReady(function() {
+            setTimeout(function() {
+                mui('#pullrefreshs').pullRefresh().pullupLoading();
+            }, 1000);
+
+        });
+    } else {
+    }
+
+
+
+</script>
+
+<!--<script src="../js/ptimumcard.js"></script>-->
+
+<script>
+
+
+</script>
+
+</body>
+</html>

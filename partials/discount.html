@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../css/mall.css" type="text/css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <script src="../js/confirm.js"></script>
+    <script src="../js/rem.js"></script>
+</head>
+<body id="discount">
+<style>
+    html,body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+</style>
+<header><a class="back" onclick="window.history.back()"></a><h1>订单详情</h1></header>
+    <div class="container" style="background:#EEEEEE;width:100%;height:100%">
+    <section id="discHeader" class="font-grey"><button class="font-grey" tabindex="0">未使用(0)</button><button class="font-grey" tabindex="1">已过期(0)</button><button class="font-grey" tabindex="2">已使用(0)</button></section>
+    <div class="board" style="width: 100%;height: 100%;overflow: auto;">
+        <div class="boardContain" >
+            <div class="discountBoard">
+                <section class="discount unused">
+                    <span class="font-orange"><i>￥</i>50</span>
+                    <span>
+                        <p>海尔消费满150元，减50元</p>
+                        <p class="font-litter-Grey">截止日期：2016-10-31</p>
+                    </span>
+                </section>
+                <section class="discount unused">
+                    <span class="font-orange"><i>￥</i>50</span>
+                    <span>
+                        <p>海尔消费满150元，减50元</p>
+                        <p class="font-litter-Grey">截止日期：2016-10-31</p>
+                    </span>
+                </section>
+                <section class="discount unused">
+                    <span class="font-orange"><i>￥</i>50</span>
+                    <span>
+                        <p>海尔消费满150元，减50元</p>
+                        <p class="font-litter-Grey">截止日期：2016-10-31</p>
+                    </span>
+                </section>
+                <section class="discount unused">
+                    <span class="font-orange"><i>￥</i>50</span>
+                    <span>
+                        <p>海尔消费满150元，减50元</p>
+                        <p class="font-litter-Grey">截止日期：2016-10-31</p>
+                    </span>
+                </section>
+                <section class="discount unused">
+                    <span class="font-orange"><i>￥</i>50</span>
+                    <span>
+                        <p>海尔消费满150元，减50元</p>
+                        <p class="font-litter-Grey">截止日期：2016-10-31</p>
+                    </span>
+                </section>
+                <section class="discount unused">
+                    <span class="font-orange"><i>￥</i>50</span>
+                    <span>
+                        <p>海尔消费满150元，减50元</p>
+                        <p class="font-litter-Grey">截止日期：2016-10-31</p>
+                    </span>
+                </section>
+                <section class="discount unused">
+                    <span class="font-orange"><i>￥</i>50</span>
+                    <span>
+                        <p>海尔消费满150元，减50元</p>
+                        <p class="font-litter-Grey">截止日期：2016-10-31</p>
+                    </span>
+                </section>
+            </div>
+            <div class="discountBoard outime">
+                <section class="discount out-time">
+                    <span class="font-litter-Grey"><i>￥</i>50</span>
+                    <span>
+                        <p>海尔消费满150元，减50元</p>
+                        <p class="font-litter-Grey">截止日期：2016-10-31</p>
+                    </span>
+                </section>
+            </div>
+            <div class="discountBoard ">
+                <section class="discount used">
+                    <span class="font-orange"><i>￥</i>50</span>
+                    <span>
+                        <p>海尔消费满150元，减50元</p>
+                        <p class="font-litter-Grey">截止日期：2016-10-31</p>
+                    </span>
+                </section>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script title="js拓展">
+    if(typeof Array.prototype.forEach == 'undefine'){
+        Array.prototype.forEach=function(callback){
+            for (item in this){
+                callback(this[item]);
+            }
+        }
+    }
+</script>
+<script title="优惠券页面UI脚本">
+    var buttons=document.querySelectorAll('#discHeader button');
+    buttons.forEach(function(item){
+        item.addEventListener('click',function(){
+            var tabindex=this.getAttribute("tabindex");
+            var boardContain=document.querySelector(".boardContain");
+            var left=-parseInt(tabindex)*100+"%";
+            boardContain.setAttribute("style","left:"+left);
+        })
+    })
+</script>
+</html>

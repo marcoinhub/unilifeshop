@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>优卡专区</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../3rd/mui/mui.min.css">
+    <!--/自己编写css--->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/page/unlifecard.css">
+    <!--标准mui.js-->
+    <script src="../3rd/mui/mui.min.js"></script>
+    <script src="../3rd/mui/mui.pullToRefresh.js"></script>
+    <script src="../3rd/mui/mui.pullToRefresh.material.js"></script>
+    <!--控制字体大小的JS-->
+    <script src="../js/rem.js"></script>
+</head>
+<body>
+<!--页面主体-->
+    <!--轮播-->
+<div class="mui-scroll-wrapper" id="scrollBody">
+    <div class="mui-scroll">
+        <div class="mui-content lunbo">
+            <div  id="sliderPage" class="mui-slider font-grey" >
+                <div class="un-search-bar" >
+                    <div class="un-input-board">
+                        <input class="un-searchInput" type="text"/>
+                    </div>
+                    <button class="a_shefen un-right-button font-grey font-normal">分类</button>
+                </div>
+                <div class="mui-slider-group mui-slider-loop" id="sliderbanner">
+                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="../images/yuantiao.jpg">
+                        </a>
+                    </div>
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="../images/yuantiao.jpg">
+                        </a>
+                    </div>
+                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="../images/yuantiao.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                </div>
+            </div>
+        </div>
+        <!--segement  页内分页-->
+        <div id="segmented-board-body" class="mui-content un-order-content  segmented-board-body ">
+
+            <div id="slider" class="mui-slider  segmented-board">
+                <!--排序列表-->
+                <div class="un-order-list">
+                    <ul>
+                        <li class="pressed">人气从高到低</li>
+                        <li>销量从高到低</li>
+                        <li>价格从高到低</li>
+                        <li>价格从低到高</li>
+                        <li>最新发布</li>
+                    </ul>
+                </div>
+                <!--分页导航-->
+                <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted un-segmented-control">
+                    <div class="mui-scroll">
+                        <a class="mui-control-item mui-active" href="#item1mobile">
+                            推荐
+                        </a>
+                        <a class="mui-control-item" catalogId="0" href="#item2mobile">
+                            家居用品
+                        </a>
+                        <a class="mui-control-item" catalogId="1"  href="#item3mobile">
+                            洗护美妆
+                        </a>
+                        <a class="mui-control-item" catalogId="2"  href="#item4mobile">
+                            休闲食品
+                        </a>
+                        <a class="mui-control-item" catalogId="3" href="#item5mobile">
+                            粮油干货
+                        </a>
+                        <a class="mui-control-item" catalogId="4" href="#item6mobile">
+                            糕点乳品
+                        </a>
+                        <a class="mui-control-item"  catalogId="5" href="#item7mobile">
+                            新鲜水果
+                        </a>
+                        <a class="mui-control-item"  catalogId="6" href="#item8mobile">
+                            户外运动
+                        </a>
+                        <a class="mui-control-item"  catalogId="7" href="#item9mobile">
+                            家电智能
+                        </a>
+                        <a class="mui-control-item" catalogId="8" href="#item10mobile">
+                            母婴用品
+                        </a>
+                        <a class="mui-control-item" catalogId="9" href="#item11mobile">
+                            医疗保健
+                        </a>
+                        <a class="mui-control-item" catalogId="10" href="#item12mobile">
+                            海鲜水产
+                        </a>
+                        <a class="mui-control-item" catalogId="11" href="#item13mobile">
+                            卡券礼品
+                        </a>
+                        <a class="mui-control-item" catalogId="12" href="#item14mobile">
+                            厨卫清洁
+                        </a>
+                        <a class="mui-control-item" catalogId="13" href="#item15mobile">
+                            汽车用品
+                        </a>
+                        <a class="mui-control-item" catalogId="14" href="#item16mobile">
+                            酒水茶饮
+                        </a>
+                        <a class="mui-control-item" catalogId="15" href="#item17mobile">
+                            新鲜蔬菜
+                        </a>
+                        <a class="mui-control-item" catalogId="16" href="#item18mobile">
+                            珠宝首饰
+                        </a>
+                        <div class="slide-dd"></div>
+                    </div>
+
+                </div>
+                <!--正序-->
+                <button class="order up" onclick="showlist()">人气<i class="order-up"></i></button>
+                <!--倒序——>
+                <!--<button class="order up" onclick="showlist()">人气<i class="order-up"></i></button>-->
+
+
+                <!--商品区域-->
+                <div class="mui-slider-group" id="muiSliderGroup">
+                    <!--模板 <div id="item{n}mobile" class="mui-slider-item mui-control-content mui-active">-->
+                    <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                        <div id="scroll1" class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                        </a>
+                                        <div class="mui-media-body un-medie-price"><span class="un-price">1000</span><button class="cart"></button></div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item2mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                        </a>
+                                        <div class="mui-media-body un-medie-price"><span class="un-price">1000</span><button class="cart"></button></div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item3mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                        <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                            <!--链接跳转商品详情-->
+                                            <a href="#">
+                                                <div class="un-label"><label class="baoyou">包邮</label></div>
+                                                <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                                <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                                <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                        </li>
+
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item4mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item5mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item6mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item7mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item8mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item9mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item10mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item11mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item12mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item13mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item14mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item15mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item16mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item17mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="item18mobile" class="mui-slider-item mui-control-content">
+                        <div class="mui-scroll-wrapper">
+                            <div class="mui-scroll">
+                                <ul class="mui-table-view mui-grid-view un-table-view un-table-view">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">
+                                        <!--链接跳转商品详情-->
+                                        <a href="#">
+                                            <div class="un-label"><label class="baoyou">包邮</label></div>
+                                            <img class="mui-media-object" src="../images/9288695698596082_500.jpg">
+                                            <div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div>
+                                            <div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <!--分类弹出层---->
+    <div class="mask" style="position: fixed;left: 0;top: 0;bottom: 0;right: 0;z-index: 10000;background: rgba(0,0,0,0.7);display: none">
+        <button  id="miss" style="float: left;display: block;width: 10%;height: 100%;background: transparent;border: none"></button>
+        <div style="float: left;background: #ffffff;width: 90%;height: 100%;transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1.0);transform:translate3D(100%,0,0)">
+            <ul class="searchview-tabs center">
+                <li><button class="btn font-litter-Grey searchview-tabs-active" tabindex="0">生鲜食材</button></li>
+                <li><button class="btn font-litter-Grey" tabindex="1">生鲜食材</button></li>
+                <li><button class="btn font-litter-Grey" tabindex="2">生鲜食材</button></li>
+                <li><button class="btn font-litter-Grey" tabindex="3">生鲜食材</button></li>
+            </ul>
+            <div class="searchview-kind " tabindex="0">
+                <dl>
+                    <dt>新鲜水果 <a class="right" onclick='choosed()'>全部 >></a></dt>
+                    <dd>
+                        <ul class="searchview-kind-ul">
+                            <li class="searchview-kind-li"><a class="btn searchview-kind-button" onclick='choosed()'>国产水果</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="searchview-kind searchview-kind-show" tabindex="1">
+                <dl>
+                    <dt>海鲜水产 <a class="right" onclick='choosed()'>全部 >></a></dt>
+                    <dd>
+                        <ul class="searchview-kind-ul">
+                            <li class="searchview-kind-li"><a class="btn searchview-kind-button" onclick='choosed()' >国产水果</a></li>
+
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="searchview-kind " tabindex="2">
+                <dl>
+                    <dt>肉禽蛋类 <a class="right" onclick='choosed()'>全部 >></a></dt>
+                    <dd>
+                        <ul class="searchview-kind-ul">
+                            <li class="searchview-kind-li"><a class="btn searchview-kind-button" onclick='choosed()'>国产水果</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="searchview-kind " tabindex="3">
+                <p class="center font-litter-Grey" style="height: 6rem;font-size: 1.5rem;line-height: 6rem">暂时没有这个分类的商品</p>
+            </div>
+        </div>
+    </div>
+    <!--tabbar-->
+</body>
+<script src="../3rd/jq/jquery.js"></script>
+<script>
+    //初始化个滚动高度
+    $('.segmented-board').height($(window).height());
+    var he=parseFloat($(window).height())-parseFloat($('#sliderSegmentedControl').height())+'px';
+    $('#muiSliderGroup').height(he);
+    //商品模板
+    var template=$(
+            '<li class="mui-table-view-cell mui-media mui-col-xs-6 un-table-view-cell">'+
+            '<a href="#">'+
+            '<div class="un-label"><label class="baoyou">包邮</label></div>'+
+            '<img class="mui-media-object" src="../images/9288695698596082_500.jpg">'+
+            '<div class="mui-media-body">asdfasfdasfdasfdsfdsfdsafdsf</div></a>'+
+            '<div class="mui-media-body un-medie-price"><span class="un-price">1000</span></div>'+
+            '</li>');
+    var currentCatalogId,currentUl,currentWrapper,hasStop,defaultPageIndex;
+    defaultPageIndex=0;
+    hasStop=false;
+    function getCurrentClass(){
+        if($.isEmptyObject( $('#sliderSegmentedControl .mui-active '))){
+        }
+        return    $('#sliderSegmentedControl .mui-active ').attr('catalogId');
+    }
+    function getCurrentWrapper(){
+        return    $('#muiSliderGroup .mui-active .mui-scroll-wrapper ');
+    }
+    function getCurrentUl(){
+        if($.isEmptyObject($('#muiSliderGroup .mui-active .mui-table-view '))){
+            return  $('#mui-slider-group  .mui-table-view ').get(0);
+        }
+        return    $('#muiSliderGroup .mui-active .mui-table-view ');
+    }
+    function getSliderSegmentedControl(){
+        return  $('#sliderSegmentedControl');
+    }
+    //排序点击
+    function showlist(){
+        var e=window.event;
+        target= e.target;
+
+
+        var  listState=$(target).parent().find('.un-order-list').css('display')=="block"?true:false;
+        if(listState){
+            $(target).parent().find('.un-order-list').slideUp();
+        }else {
+
+            $(target).parent().find('.un-order-list').slideDown();
+        }
+        $('.un-order-list').show();
+    }
+    //监听分类切换
+    function listenCatelogChange(){
+        var ul=getCurrentUl();
+
+    }
+
+    //点击切换分类
+    mui('#sliderSegmentedControl').on('tap', 'a', function(e) {
+            listenCatelogChange();
+             var tranform='translate3D('+$(e.target).position().left+'px'+',0,0)';
+             var width=$(e.target).width()*0.7+'px';
+             $('.slide-dd').css({'transform':tranform,'width':width});
+
+        })
+    //滚动切换分类
+        document.querySelector('#slider').addEventListener('slide', function(event) {
+            var segmentControl=document.getElementById('sliderSegmentedControl').addEventListener('scrollend',function(){
+
+                var tranform='translate3D('+$('#sliderSegmentedControl .mui-active').position().left+'px'+',0,0)';
+                var width=$('#sliderSegmentedControl .mui-active').width()*0.7+'px';
+                $('.slide-dd').css({'transform':tranform,'width':width});
+                var ul=getCurrentUl();
+                if($.isEmptyObject(ul)){
+                    listenCatelogChange();
+                }
+                document.getElementById('sliderSegmentedControl').removeEventListener('scrollend',function(){})
+
+            })
+        });
+    //监听整屏滚动
+        document.getElementById('scrollBody').addEventListener('scroll',function(){
+        var ul=getCurrentWrapper();
+        var sliderSege=getSliderSegmentedControl();
+
+        if(sliderSege.offset().top>0){
+            if(!hasStop){
+                hasStop=true;
+                mui(ul.get(0)).scroll().setStopped(hasStop);
+
+                return;
+            }
+        }else {
+            if(typeof id !='#undefined'){
+                mui(ul.get(0)).scroll().setStopped(false);
+            }
+
+            //console.log(('#'+ul.attr('id')).scroll().setStopped());
+        }
+    })
+    $('.un-order-list li').on('click',function(){
+        $('.un-order-list li').removeClass('pressed');
+        $(this).addClass('pressed');
+    })
+    function choosed(){
+        var  self=$('#miss');
+        var percent=0
+        var timer=setInterval(function(){
+            var translate='translate3D('+percent+'%,0,0)';
+            $(self).next().css('transform',translate);
+            if(percent>=100){
+                window.clearInterval(timer);
+                return;
+            }
+            percent++;
+        },1)
+        var ttimer=setTimeout(function(){
+            $('.mask').css('display','none');
+        },800)
+    }
+    (function (){
+        $('.a_shefen').on('click',function(){
+            var percent=100;
+            $('.mask').css('display','block');
+            var mtimer=setInterval(function(){
+
+                var translate='translate3D('+percent+'%,0,0)';
+                $('.mask div').css('transform',translate);
+                if(percent<=0){
+                    window.clearInterval(mtimer);
+                    return;
+                }
+                percent--;
+            },1)
+        })
+        $('.searchview-tabs button').on('click',function(){
+            $('.searchview-tabs button').each(function(){$(this).removeClass('searchview-tabs-active');});
+            $(this).addClass('searchview-tabs-active');
+            var tabindex=$(this).attr('tabindex');
+            $('.searchview-kind').css('display','none');
+            $('.searchview-kind').each(function(){if($(this).attr('tabindex').match(tabindex)){
+                $(this).css('display','block');}});})
+        $('.searchview-kind-button').on('click',function(){$('.searchview-kind-button').each(function(){$(this).removeClass('searchview-kind-active')});$(this).addClass('searchview-kind-active')});
+        $('#miss').on('click',function(){
+                    var self=this;
+                    var percent=0
+                    var timer=setInterval(function(){
+                        var translate='translate3D('+percent+'%,0,0)';
+                        $(self).next().css('transform',translate);
+                        if(percent>=100){
+                            window.clearInterval(timer);
+                            return;
+                        }
+                        percent++;
+                    },1)
+                    var ttimer=setTimeout(function(){
+                        $('.mask').css('display','none');
+                    },800)
+                }
+        )
+    })();
+    mui('#slider-page').slider({interval: 5000});
+    mui.init();
+    //获取segement的高度
+    var h=$('#sliderSegmentedControl').height();
+    (function($,j) {
+        //阻尼系数
+        var deceleration = mui.os.ios?0.003:0.0009;
+        $('.mui-scroll-wrapper').scroll({
+            bounce:false,
+            indicators: false, //是否显示滚动条
+            deceleration:deceleration
+        });
+        $.ready(function() {
+            $.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+                pullRefreshEl.addEventListener('scrollend',function(){
+                    var scroll=j(pullRefreshEl).parent().get(0);
+                    if(j('.mui-table-view').offset().top>h){
+
+                    }
+                })
+                $(pullRefreshEl).pullToRefresh({
+                    up: {
+                        callback: function() {
+                            var self = this;
+                            setTimeout(function() {
+                                var ul = self.element.querySelector('.mui-table-view');
+                                ul.appendChild(createFragment(ul, index, 5));
+                                self.endPullUpToRefresh();
+                                j('.lunbo').css('display','block');
+                            }, 1000);
+                        }
+                    }
+                });
+            });
+            var createFragment = function(ul, index, count, reverse) {
+                var length = ul.querySelectorAll('li').length;
+                var fragment = document.createDocumentFragment();
+                var li;
+                for (var i = 0; i < count; i++){
+                    li = template.clone(true);
+                    j(fragment).append(li);
+                }
+
+                return fragment;
+            };
+        });
+    })(mui,jQuery);
+</script>
+
+</html>

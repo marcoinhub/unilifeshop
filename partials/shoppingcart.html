@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>一箱好货</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../3rd/mui/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../3rd/mui/app.css"/>
+    <!--/自己编写css--->
+
+    <link rel="stylesheet" href="../css/main.css">
+    <!--标准mui.js-->
+    <script src="../3rd/mui/mui.min.js"></script>
+    <!--控制字体大小的JS-->
+    <script src="../js/rem.js"></script>
+</head>
+
+<body>
+<header><a class="back" onclick="window.history.back()"></a><h1>购物车</h1></header>
+<div class="main">
+
+    <div class="Want_buy" >
+        <div class="catr_a_1">
+            <img src="../images/cart_a_03.png">
+            <p>
+                您的购物车内还没有任何商品
+            </p>
+        </div>
+    </div>
+    <div class="Want_buy" >
+        <div class="Want_buy_aer" >
+            <div class="Want_buy_aer_h">
+                优卡专区
+            </div>
+
+            <dl>
+                <dt>
+                    <input type="checkbox" ><!--ng-checked="isSelected(shoppingCart)"-->
+                </dt>
+                <dd>
+                    <img src="../images/9288695698596082_500.jpg"  >
+                </dd>
+                <dd  class="want_by_a">
+                    <p>
+                        {{shoppingCart.productName}}
+                    </p>
+                    <!-- <p>
+                         规格{{shoppingCart.weight | number:2}}kg
+                     </p>-->
+                    <div class="want_by_b" >
+                      <span>
+                            ￥20.00
+                      </span>
+                    </div>
+                    <div class="want_by_bt">
+                        <div class="want_by_c">
+                            <button class="want_by_jian" >-</button>
+                            <input type="number" class="want_by_nub" min="1">
+                            <button class="want_by_jia">+</button>
+                        </div>
+                    <span class="a_delete" >
+                        <img src="../images/delete_03.jpg">
+                    </span>
+                    </div>
+
+                </dd>
+            </dl>
+            <dl class="translucent">
+                <dt>
+                    <input type="checkbox"  disabled style="visibility: hidden;"><!--ng-checked="isSelected(shoppingCart)"-->
+                </dt>
+                <dd>
+                    <img src="../images/9288695698596082_500.jpg"  >
+                </dd>
+                <dd  class="want_by_a">
+                    <p>
+                        {{shoppingCart.productName}}
+                    </p>
+                    <!-- <p>
+                         规格{{shoppingCart.weight | number:2}}kg
+                     </p>-->
+                    <div class="want_by_b" >
+                      <span>
+                            ￥20.00
+                      </span>
+                    </div>
+                    <div class="want_by_bt">
+                        <div class="want_by_ctr">
+                            已下架
+                        </div>
+                    <span class="a_delete" >
+                        <img src="../images/delete_03.jpg">
+                    </span>
+                    </div>
+
+                </dd>
+            </dl>
+        </div>
+        <div class="Want_buy_aery">
+            <dl>
+                <dt>
+                    <!--<div style="width: 100%; height: 100%" ng-click="switchSelect(shoppingCart.productId)" >-->
+                    <input type="checkbox" ><!---->
+                    <!-- </div>-->
+                </dt>
+
+
+                <dd>
+                    <img src="../images/9288695698596082_500.jpg"  >
+                </dd>
+                <dd  class="want_by_a">
+                    <p>
+                        {{shoppingCart.productName}}
+                    </p>
+                    <!-- <p>
+                         规格{{shoppingCart.weight | number:2}}kg
+                     </p>-->
+                    <div class="want_by_b" >
+                      <span>
+                            ￥800.00
+                      </span>
+                    </div>
+                    <div class="want_by_bt">
+                        <div class="want_by_c" >
+                            <button class="want_by_jian" >-</button>
+                            <input type="number" class="want_by_nub" min="1" >
+                            <button class="want_by_jia">+</button>
+                        </div>
+                    <span class="a_delete"  ng-click="deleteFromShopCart(shoppingCart)">
+                        <img src="../images/delete_03.jpg">
+                    </span>
+                    </div>
+
+                </dd>
+            </dl>
+            <dl class="translucent">
+                <dt>
+                    <input type="checkbox"  disabled style="visibility: hidden;"><!--ng-checked="isSelected(shoppingCart)"-->
+                </dt>
+
+                <dd>
+                    <img src="../images/9288695698596082_500.jpg"  >
+                </dd>
+                <dd  class="want_by_a">
+                    <p>
+                        {{shoppingCart.productName}}
+                    </p>
+                    <!-- <p>
+                         规格{{shoppingCart.weight | number:2}}kg
+                     </p>-->
+                    <div class="want_by_b" >
+                      <span>
+                            ￥800.00
+                      </span>
+                    </div>
+                    <div class="want_by_bt">
+                        <div class="want_by_ctr">
+                            已下架
+                        </div>
+                    <span class="a_delete"  ng-click="deleteFromShopCart(shoppingCart)">
+                        <img src="../images/delete_03.jpg">
+                    </span>
+                    </div>
+
+                </dd>
+            </dl>
+        </div>
+        <!--/清空-->
+        <div class="a_empty" ng-click="clearShopCart()">
+            清空购物车
+        </div>
+    </div>
+
+</div>
+<div class="settlement" id="shoppingcart-footer" ><!--ng-if="!isEditing"-->
+    <dl style="flex:1">
+        <dt>
+            <input type="checkbox"  ></p>
+        </dt>
+        <dd >
+            全选
+        </dd>
+        <dd>
+            <p>合计：<i>￥500.00</i></p>
+            <span>
+                不含运费
+            </span>
+        </dd>
+        <dd>
+            <a > 去结算（2）</a>
+        </dd>
+    </dl>
+</div>
+
+<div class="footer">
+    <div id="user_default_footer" class="default_foot" style=" display: block" >
+        <a href="#main" class="icon homes pressed" data-transition="slide:back">首页</a>
+        <a href="#listof" class="icon ifications" data-transition="slide">分类</a>
+        <a  class="icon shopping" >购物车<i class="af-badge">1</i></a>
+        <a class="icon personal">我的</a>
+    </div>
+</div>
+
+</body>
+</html>

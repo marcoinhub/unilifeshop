@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../css/mall.css" type="text/css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <script src="../js/confirm.js"></script>
+    <script src="../js/rem.js"></script>
+</head>
+<body id="listorder">
+<header><a class="back" onclick="window.history.back()"></a><h1>全部订单</h1></header>
+<div class="container" style="background:#EEEEEE">
+    <!--未支付-->
+    <div class="list-goods" >
+        <div class="title font-small">一箱好货<span  class="right font-red">未支付</span></div>
+        <dl onclick="toDetailPage()">
+        <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+        <dd><a class="font-normal" >13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+            <p class="">x1</p>
+            </dd>
+        </dl>
+        <p class="action">
+            <a class="right btn btn-white btn-small" onclick="cancelOrder()">取消订单</a><a class="right btn btn-white btn-small " onclick="toPay()">立即付款</a>
+            <span class="font-weak">实付款：￥116.00</span>
+        </p>
+    </div>
+    <!--已关闭-->
+    <div class="list-goods"  >
+        <div class="title font-small">一箱好货<span  class="right">已关闭</span></div>
+        <dl onclick="toDetailPage()">
+            <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+            <dd><a class="font-normal">13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+                <p class="">x1</p>
+            </dd>
+        </dl>
+        <p class="action">
+            <span class="font-weak">实付款：￥116.00</span>
+        </p>
+    </div>
+    <!--已取消-->
+    <div class="list-goods" >
+        <div class="title font-small">一箱好货<span  class="right">已取消</span></div>
+        <dl onclick="toDetailPage()">
+            <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+            <dd><a class="font-normal">13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+                <p class="">x1</p>
+            </dd>
+        </dl>
+        <p class="action">
+            <span class="font-weak">实付款：￥116.00</span>
+        </p>
+    </div>
+    <!--已关闭-->
+    <div class="list-goods">
+        <div class="title font-small">一箱好货<span  class="right">已关闭</span></div>
+        <dl  onclick="toDetailPage()">
+            <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+            <dd><a class="font-normal">13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+                <p class="">x1</p>
+            </dd>
+        </dl>
+        <p class="action">
+            <span class="font-weak">实付款：￥116.00</span>
+        </p>
+    </div>
+    <!--已支付-->
+    <div class="list-goods" >
+        <div class="title font-small">一箱好货<span  class="right">已支付</span></div>
+        <dl onclick="toDetailPage()">
+            <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+            <dd><a class="font-normal">13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+                <p class="">x1</p>
+            </dd>
+        </dl>
+        <p class="action">
+            <span class="font-weak">实付款：￥116.00</span>
+        </p>
+    </div>
+    <!--已发货-->
+    <div class="list-goods">
+        <div class="title font-small">一箱好货<span  class="right">已发货</span></div>
+        <dl  onclick="toDetailPage()">
+            <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+            <dd><a class="font-normal">13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+                <p class="">x1</p>
+            </dd>
+        </dl>
+        <p class="action">
+            <a class="right btn btn-white btn-small" onclick="toExpress()">查看物流</a><a class="right btn btn-white btn-small " onclick="makeSure()">确认收货</a>
+            <span class="font-weak">实付款：￥116.00</span>
+        </p>
+    </div>
+    <!--待发货-->
+    <div class="list-goods">
+        <div class="title font-small">一箱好货<span  class="right">待发货</span></div>
+        <dl  onclick="toDetailPage()">
+            <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+            <dd><a class="font-normal">13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+                <p class="">x1</p>
+            </dd>
+        </dl>
+        <p class="action">
+            <span class="font-weak">实付款：￥116.00</span>
+        </p>
+    </div>
+
+    <!--已完成-->
+
+    <div class="list-goods" >
+        <div class="title font-small">一箱好货<span  class="right">已完成</span></div>
+        <dl onclick="toDetailPage()">
+            <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+            <dd><a class="font-normal">13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+                <p class="">x1</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+            <dd><a class="font-normal">13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+                <p class="">x1</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+            <dd><a class="font-normal">13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+                <p class="">x1</p>
+            </dd>
+        </dl>
+    </div>
+</div>
+</body>
+<script>
+    //跳转到商品详情
+    function  toDetailPage(){
+        var event= window.event;
+        var target=event.target;
+        window.location.href='detailorder.html';
+    }
+    //弹出确认收货框
+    function makeSure(){
+        var myConfirm =new confirm;
+        myConfirm.init({
+            title:'消息框',
+            info:'你确认已经收到货了吗',
+            sure:'确认',
+            cancle:'取消'
+        },function(respose){
+            if (respose==true){
+
+            }else if(respose==false){
+                console.log(2);
+            }
+        });
+    }
+    //跳转到查看物流
+    function toExpress(){
+        window.location.href='express.html';
+    }
+   //弹出确认取消订单
+    function  cancelOrder(){
+        var myConfirm =new confirm;
+        myConfirm.init({
+            title:'消息框',
+            info:'确认取消订单吗',
+            sure:'确认',
+            cancle:'取消'
+        },function(respose){
+            if (respose==true){
+
+            }else if(respose==false){
+                console.log(2);
+            }
+        });
+    }
+    //前往支付页面
+    function toPay(){
+        window.location.href='orderpayment.html';
+    }
+</script>
+</html>

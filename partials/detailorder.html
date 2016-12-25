@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../css/mall.css" type="text/css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <script src="../js/confirm.js"></script>
+    <script src="../js/rem.js"></script>
+</head>
+<body id="detailorder">
+<header><a class="back" onclick="window.history.back()"></a><h1>订单详情</h1></header>
+<div class="container" style="background:#EEEEEE">
+    <div class="list-goods">
+
+            <p style="margin-left: 2rem;line-height: 2rem;background: #FFFFFF;border-bottom: 1px solid #CACACA;">订单号：c16090211230</p>
+            <div class="font-grey font-small" style="margin-left: 2rem;">
+                <p >测试 13671670088</p>
+                <p >上海上海市徐汇区桂平了刚刚哈哈</p>
+            </div>
+
+    </div>
+    <div class="list-goods">
+        <div class="title font-small">一箱好货</div>
+        <dl>
+            <dt><img img src=""  onerror="javascript:this.src='../images/default.jpg'"> </dt>
+            <dd><a class="font-normal" >13.5度雪花黑啤500ml*12听</a></dd>
+            <dd>
+            </dd>
+            <dd><p class="">￥146.00</p>
+                <p class="">x1</p>
+            </dd>
+        </dl>
+    </div>
+
+    <div class="list-goods">
+        <div class="label font-small font-grey">一箱好货<span class="right font-grey">在线支付</span></div>
+
+    </div>
+
+    <div class="list-goods">
+        <div class="label font-small font-grey">商品总额<span class="right font-red">￥0.00</span></div>
+    </div>
+
+    <div class="list-goods " style="padding:2% 0">
+        <button class=" right btn btn-white-invearse btn-white btn-small" onclick="toExpress()">查看物流</button><button class="right btn btn-white-invearse btn-small" onclick="makeSure()" >确认收货</button>
+    </div>
+    <div class="a_list_goods">
+    	<a href="http://q.url.cn/s/x6lvqVm">
+        	联系客服
+        </a>
+    </div>
+</div>
+</body>
+<script>
+    function makeSure(){
+        var myConfirm =new confirm;
+        myConfirm.init({
+            title:'消息框',
+            info:'你确认已经收到货了吗',
+            sure:'确认',
+            cancle:'取消'
+        },function(respose){
+            if (respose==true){
+
+            }else if(respose==false){
+                console.log(2);
+            }
+        });
+    }
+    function toExpress(){
+        window.location.href='express.html';
+    }
+</script>
+</html>

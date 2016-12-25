@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="height">
+
+<head>
+    <meta charset="utf-8">
+    <title>一箱好货</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../3rd/mui/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../3rd/mui/app.css"/>
+    <!--/自己编写css--->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!--标准mui.js-->
+    <script src="../3rd/mui/mui.min.js"></script>
+    <!--控制字体大小的JS-->
+    <script src="../js/rem.js"></script>
+</head>
+
+<body class="height">
+<div class="header_a">
+    <a class="backButton" onclick="window.history.back()"></a>
+    <h1>
+        <img src="../images/icon(11).png">
+        本来生活
+    </h1>
+</div>
+<div style="position: relative;height: 86%;padding-bottom: 5%;">
+    <div id="pullrefreshs" class="mui-content mui-scroll-wrapper">
+        <div class="mui-scroll">
+
+
+    <div class="main coupons_bg" style="height: 90%;">
+
+        <div id="store_slider" class="mui-slider" >
+            <div class="mui-slider-group mui-slider-loop" id="sliderbanner">
+                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="../images/yuantiao.jpg">
+                    </a>
+                </div>
+                <!-- 第一张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="../images/shuijiao.jpg">
+                    </a>
+                </div>
+                <!-- 第二张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="../images/muwu.jpg">
+                    </a>
+                </div>
+                <!-- 第三张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="../images/cbd.jpg">
+                    </a>
+                </div>
+                <!-- 第四张 -->
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="../images/yuantiao.jpg">
+                    </a>
+                </div>
+                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="../images/shuijiao.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+            </div>
+        </div>
+
+        <script type="text/javascript" charset="utf-8">
+            mui.init({
+                swipeBack:true //启用右滑关闭功能
+            });
+            var slider = mui("#store_slider");
+            slider.slider({
+                interval: 5000
+            });
+            // document.getElementById("switch").addEventListener('toggle', function(e) {
+            // if (e.detail.isActive) {
+            // slider.slider({
+            // interval: 5000
+            // });
+            // } else {
+            // slider.slider({
+            // interval: 0
+            // });
+            // }
+            // });
+        </script>
+
+                            <div class="ofgoods_b">
+                                <p style="padding-top: 20%; color: #6E6E6E; font-size: 1.2rem; text-align: center">
+                                    暂无结果
+                                </p>
+                            </div>
+
+
+                            <dl  class="store_b">
+                                <dt>
+                                    <img src="">
+                                <ul class="ptimumcar_a">
+                                    <li>
+                                        <img src="../images/1(272).jpg">
+                                    </li>
+                                </ul>
+                                </dt>
+                                <dd>
+                                    <p class="store_bp">商品名字</p>
+                                    <span class="store_bspan" >￥12.00</span>
+                                    <ul>
+                                        <li> </li>
+                                    </ul>
+                                    <div class="store_c">
+                                        <a><img src="../images/store_09.jpg"></a>
+                                        <a>立即购买</a>
+                                    </div>
+                                </dd>
+                            </dl>
+
+                            <dl  class="store_b">
+                                <dt>
+                                    <img src="">
+                                <ul class="ptimumcar_a">
+                                    <li>
+                                        <img src="../images/1(272).jpg">
+                                    </li>
+                                </ul>
+                                </dt>
+                                <dd>
+                                    <p class="store_bp">商品名字</p>
+                                    <span class="store_bspan" >￥12.00</span>
+                                    <ul>
+                                        <li> </li>
+                                    </ul>
+                                    <div class="store_c">
+                                        <img src="../images/store_09.jpg">
+                                        <span>立即购买</span>
+                                    </div>
+                                </dd>
+                            </dl>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+<script>
+    mui.init({
+        pullRefresh: {
+            container: '#pullrefreshs',
+            down: {
+
+                //callback: pulldownRefresh
+            },
+            up: {
+                contentrefresh: '正在加载...',
+                callback: pullupRefresh
+            }
+        }
+    });
+    /**
+     * 下拉刷新具体业务实现
+     */
+//    function pulldownRefresh() {
+//        setTimeout(function() {
+////            var table = document.body.querySelector('.mui-table-view');
+////            var cells = document.body.querySelectorAll('.mui-table-view-cell');
+////            for (var i = cells.length, len = i + 3; i < len; i++) {
+////                var li = document.createElement('li');
+////                li.className = 'mui-table-view-cell';
+////                li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+////                //下拉刷新，新纪录插到最前面；
+////                table.insertBefore(li, table.firstChild);
+////            }
+//           // mui('#pullrefreshs').pullRefresh().endPulldownToRefresh(); //refresh completed
+//        }, 1500);
+//    }
+    var count = 0;
+    /**
+     * 上拉加载具体业务实现
+     */
+    function pullupRefresh() {
+        setTimeout(function() {
+            mui('#pullrefreshs').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+//            var table = document.body.querySelector('.mui-table-view');
+//            var cells = document.body.querySelectorAll('.mui-table-view-cell');
+//            for (var i = cells.length, len = i + 20; i < len; i++) {
+//                var li = document.createElement('li');
+//                li.className = 'mui-table-view-cell';
+//                li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+//                table.appendChild(li);
+//            }
+        }, 1500);
+    }
+    if (mui.os.plus) {
+        mui.plusReady(function() {
+            setTimeout(function() {
+                mui('#pullrefreshs').pullRefresh().pullupLoading();
+            }, 1000);
+
+        });
+    } else {
+//        mui.ready(function() {
+////            mui('#pullrefreshs').pullRefresh().pullupLoading();
+//            mui('#pullrefreshs').pullRefresh().enablePullupToRefresh();
+//        });
+    }
+</script>
+
+    <div class="footer">
+    <div id="user_default_footer" class="default_foot" style=" display: block" >
+        <a href="#main" class="icon homes" data-transition="slide:back">首页</a>
+        <a href="#listof" class="icon ifications" data-transition="slide">分类</a>
+        <a  class="icon shopping" >购物车<i class="af-badge">1</i></a>
+        <a class="icon personal">我的</a>
+    </div>
+</div>
+</body>
+</html>

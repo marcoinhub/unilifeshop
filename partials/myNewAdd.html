@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../css/mall.css" type="text/css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <script src="../js/rem.js"></script>
+</head>
+<body id="myNewAdd">
+<header><a class="back" onclick="window.history.back()"></a><h1>添加新地址</h1></header>
+<div class="container">
+
+        <ul class="listReg">
+            <li><label ><span class="font-red">*&nbsp;&nbsp;</span>收货人：</label><input type="text" placeholder="请输入收货人姓名" name="name"></li>
+            <li><label ><span class="font-red">*&nbsp;&nbsp;</span>联系方式：</label><input type="tel" placeholder="请输入11位手机号码" name="tel"></li>
+            <li><label ><span class="font-red">*&nbsp;&nbsp;</span>所在地区：</label><input type="text" placeholder="请输入所在省市" name="location" onclick="selectArea()"></li>
+            <li><label ><span class="font-red">*&nbsp;&nbsp;</span>详细地址：</label><input type="text" placeholder="请输入街道门牌信息" name="door" ></li>
+            <li><label>邮政编码：</label><input type="tel" placeholder="请输入邮政编码" name="password"></li>
+        </ul>
+    <div class="center">
+        <button class="btn btn-biggest btn-red ">保存</button>
+    </div>
+</div>
+</body>
+</html>

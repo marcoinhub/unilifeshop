@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../css/mall.css" type="text/css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <script src="../js/rem.js"></script>
+</head>
+<body id="myCombo">
+<header><a class="back" onclick="window.history.back()"></a><h1>我的套餐</h1><a class="rightItem font-small" href="myComboHistory.html">历史记录</a></header>
+    <div class="container">
+       <section  class="whiteboard font-small font-grey" >您现有的套餐:<strong >月套包宝测试</strong></section>
+        <section class="whiteboard font-small font-grey">
+            <ul>
+                <li >套餐价格<a class="right font-normal">￥260.00</a></li>
+                <li >套餐有效期<a class="right font-normal">2016-10-31</a></li>
+                <li >本月已预约<a class="right font-normal">0次</a></li>
+                <li >本月免邮<a class="right font-normal">剩余4次</a></li>
+            </ul>
+        </section>
+        <section class="whiteboard font-small greyBack" >本月套餐使用情况</section>
+        <section class="whiteboard">
+            <p id="notice" class="font-large font-grey center">抱歉没有查询到您的预约记录</p>
+        </section>
+        <section class="whiteboard font-small font-grey">
+            <ul>
+                <li><dt >下单时间:</dt><dd  class="font-normal">2016-09-12</dd></li>
+                <li ><dt >收货人:</dt><dd  class="font-normal">大大</dd></li>
+                <li ><dt>收货地址:</dt><dd class="font-normal">1565645645645645656968498798798798989898</dd></li>
+                <li ><p>商品明细:</p>
+                     <ul>
+                         <li>精选紫条长茄350g×1</li>
+                     </ul>
+                </li>
+            </ul>
+        </section>
+        <div class="center" style="margin-top: 2em"><button class="btn btn-biggest btn-red divCenter" onclick="toMycomboSelect()">立即预约</button></div>
+
+    </div>
+</body>
+<script>
+    function toMycomboSelect(){
+        window.location.href='myComboSelect.html';
+    }
+</script>
+</html>

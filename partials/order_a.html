@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>一箱好货</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="../css/common.css">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="../3rd/mui/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../3rd/mui/app.css"/>
+    <!--/自己编写css--->
+
+    <link rel="stylesheet" href="../css/main.css">
+    <!--标准mui.js-->
+    <script src="../3rd/mui/mui.min.js"></script>
+    <!--控制字体大小的JS-->
+    <script src="../js/rem.js"></script>
+    <!--jq库件--->
+    <script src="../3rd/jq/jquery.js"></script>
+    <!--自定义js-->
+    <script src="../js/order.js"></script>
+</head>
+
+<body>
+<header><a class="back" onclick="window.history.back()"></a><h1>订单</h1></header>
+<!--列表-->
+
+
+<div class="main main_bottom_1 main_top">
+    <div class="confirm_a">
+        请添加收货地址
+    </div>
+    <div class="confirm_g hassub">
+        <p>测试 18513582379(默认)</p>
+        <p>福建泉州市晋江市</p>
+        <p>上海市徐汇区桂平路418号A座603室ss</p>
+    </div>
+    <!--    <div class="confirm_b">
+             <span>
+                 身份证号
+             </span>
+             <input type="text" placeholder="请输入身份证号码">
+             <a href="#">
+                保存
+             </a>
+        </div>-->
+    <div class="confirm_c">
+    <div class="confirm_small">
+            <div class="confirm_smalla">
+                <img src="../images/logo_small_03.jpg">
+                <span>一号店</span>
+            </div>
+            <dl>
+                <dt>
+                    <img src="../images/9288695698596082_500.jpg">
+                </dt>
+                <dd>
+                    <p>大葡萄</p>
+                <span>
+                    <i>￥50.00</i>
+                    <i>X5</i>
+                    <i>有无库存</i>
+                </span>
+                </dd>
+            </dl>
+            <div class="CongFyouka_small">
+                <span>小计：205.00(包含运费5.00元)</span>
+            </div>
+              <div class="youhui_small">
+                <span>店铺优惠</span>
+                <p>满200减50</p>
+            </div>
+             <div class="copewith_small">
+                <span>应付&nbsp;<b>155.00</b></span>
+            </div>
+           
+        </div>
+       
+    </div>
+
+    <!--<div class="confirm_y">-->
+    <!--<span>-->
+    <!--发票-->
+    <!--</span>-->
+    <!--<input type="checkbox" class="toggle" ng-model="needInvoice" ng-change="selectInvoice()" id="orderConfirmNeedInvoice">-->
+    <!--<label for="orderConfirmNeedInvoice" style="position: absolute;-->
+    <!--width:38px;-->
+    <!--right: 7%;-->
+    <!--left: auto;-->
+    <!--height: 15px;-->
+    <!--top: 0;-->
+    <!--bottom: 0;-->
+    <!--margin: auto;"> <span style="    width: 24px;-->
+    <!--height: 24px;-->
+    <!--top: -6px;-->
+    <!--left: -4px;-->
+    <!--"></span></label>-->
+    <!--</div>-->
+    <div class="confirm_d youhuishuoming_uot" >
+        <span>
+            优惠券
+        </span>
+        <!--<i>{{affirm.unilifeCouponId}}</i>&lt;!&ndash;confirm.sum&ndash;&gt;-->
+    </div>
+    <div class="confirm_y confirm_yuor">
+        <span>
+            优卡（剩余999999积分）
+        </span>
+        <div class="mui-switch mui-switch-mini switch_a">
+            <div class="mui-switch-handle"></div>
+        </div>
+    </div>
+    <div class="confirm_d confirm_fbd">
+        <span>
+            商品总价
+        </span>
+        <i>￥ 250.00</i><!--confirm.sum-->
+    </div>
+    <div class="confirm_e confirm_fbd">
+        <span>
+            运费
+        </span>
+        <i>￥20.00</i>
+    </div>
+    <div class="confirm_e confirm_fbd">
+        <span>
+            扣除积分
+        </span>
+        <i>-33333</i>
+    </div>
+    <div class="confirm_e confirm_fbd" >
+        <span>
+            扣除优惠券
+        </span>
+        <i>-50</i>
+    </div>
+    <!--<div class="confirm_f_1">-->
+    <!--<div class="confirm_f">-->
+    <!--<span>-->
+    <!--可用账户余额抵扣：{{point}}-->
+    <!--</span>-->
+    <!--<i>-->
+    <!--<input id="toggle1" type="checkbox" name="toggle1" ng-model="usePoint" class="toggle">-->
+    <!--<label for="toggle1" data-on=" " data-off=" " class=""><span class=""></span>-->
+    <!--</label>-->
+    <!--</i>-->
+    <!--</div>-->
+    <!--</div>-->
+
+</div>
+
+<div class="cope_with" id="confirm-footer"  >
+            <span>
+                应付：<i>￥500.00</i>
+            </span>
+    <p >
+        提交订单
+    </p>
+</div>
+<!--/优惠券-->
+<div class="favorable_smoll">
+    <div class="favorable_smolla">
+        <h1>
+        	店铺优惠
+        </h1>
+        <ul>
+        	<li><span>满200减50元</span> <input type="radio" name="a"></li>
+            <li><span>满200减50元</span> <input type="radio" name="a"></li>
+            <li><span>满200减50元</span> <input type="radio" name="a"></li>
+             <li><span>不使用</span> <input type="radio" name="a"></li>
+        </ul>
+        <div class="favor_sub">
+        	确认
+        </div>
+    </div>
+</div>
+<!--/优惠券-->
+
+
+<script>
+    mui.init({
+        swipeBack:true //启用右滑关闭功能
+    });
+	$(function(){
+			$(".youhui_small p").click(function(){
+					$('.favorable_smoll').animate({bottom: '0%'}, 400);
+					$('.favorable_smolla').animate({bottom: '0%'}, 400);
+				})
+			$(".favor_sub").click(function(){
+					$('.favorable_smoll').animate({bottom: '-100%'}, 400);
+					$('.favorable_smolla').animate({bottom: '-100%'}, 400);
+				})
+		})
+</script>
+<!--class="backButton" 返回-->
+</body>
+</html>

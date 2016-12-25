@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="../css/mall.css" type="text/css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <script src="../js/rem.js"></script>
+    <style>
+        html,body{width: 100%;height: 100%;background: #f3f3f3; }
+        label{
+            display: inline-block;
+            width: 27%;
+            text-align: right;
+            padding-right: 5%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body id="myCombo">
+<header><a class="back" onclick="window.history.back()"></a><h1>礼品兑换</h1></header>
+<div class="container center " style="height: 100%;box-sizing: border-box">
+    <p style="background: #494a4d;padding: 10%;color: #39b54a; margin-bottom: 10%;">验证通过！为了成功配送，还须您填写个人信息和配送地址</p>
+    <section ><label><i style="color: #F15056;margin-right: 0.5em;">*</i>姓名</label><input type="text" style="width: 45%"  placeholder="请输入姓名"></section>
+    <section ><label><i style="color: #F15056;margin-right: 0.5em;">*</i>手机号</label><input type="tel" style=" width: 45%;" placeholder="请输入手机号"></section>
+    <section ><label><i style="color: #F15056;margin-right: 0.5em;">*</i>所在区域</label><input type="text" style="width: 45%;"  placeholder="请选择地址" ></section>
+    <section><label class=""><i style="color: #F15056;margin-right: 0.5em;">*</i>详细地址</label><input type="text" style=" width: 45%;" placeholder="请选择详细地址"></section>
+    <section><label>邮政编码</label><input type="tel" style="width: 45%;" placeholder="请填写邮编"></section>
+    <section><button style="width: 27%;height: 2rem;background: #39b54a;color: #ffffff; border: none; border-radius: .4rem;">确认兑换</button></section>
+</div>
+</body>
+<script>
+    (function (win,dom){
+        var clear=true;
+        var inputs=dom.querySelectorAll('input');
+        var length=inputs.length;
+        var targetPosition;
+        for(var i=0;i<length ;i++){
+            var input=inputs[i];
+            input.addEventListener('focus',function(){
+                var offsetTop=this.getBoundingClientRect().top;
+                console.log(offsetTop);
+                var height=this.getBoundingClientRect().height;
+                var fontSize=parseFloat(dom.querySelector('html').style.fontSize);
+                dom.querySelector('.container').style.marginTop=60+height-offsetTop+'px';
+            })
+            input.addEventListener('blur',function(){
+                var e=win.event.target;
+                console.log(e);
+                dom.querySelector('.container').style.marginTop=0+'px';
+            })
+        }
+    })(window,document)
+</script>
+</html>
